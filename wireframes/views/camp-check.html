@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camp Check - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+  <style>
+    .radio-group { display: flex; gap: 16px; align-items: center; }
+    .radio-group label { display: flex; align-items: center; gap: 4px; font-size: 13px; cursor: pointer; }
+    .eval-section { border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .eval-section:last-of-type { border-bottom: none; }
+    .eval-label { font-weight: 600; font-size: 13px; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Hotelería <span>BCA</span></div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Dashboard</div>
+      <a href="dashboard.html"><span class="nav-icon">📊</span> Dashboard</a>
+
+      <div class="nav-section">Hotelería</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">🗺️</span> Mapa de Ocupación</a>
+      <a href="habitaciones.html"><span class="nav-icon">🛏️</span> Gestión Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">📥</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">📤</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">♻️</span> Recuperación Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">🏢</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">🔧</span> Órdenes de Trabajo</a>
+      <a href="camp-check.html" class="active"><span class="nav-icon">✅</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">🧹</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">📋</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">🔄</span> Conciliación</a>
+      <a href="tarjetas.html"><span class="nav-icon">💳</span> Gestión Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">📈</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">👤</span> Gestión Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Carolina Méndez</div>
+      <div class="user-role">Recepcionista</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Camp Check - Inspección de Habitaciones</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026 · 09:15</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <select class="form-select" style="width:auto;">
+          <option>Seleccionar Recepcionista</option>
+          <option>Carolina Méndez</option>
+          <option>Patricia Vega</option>
+          <option>Lorena Salazar</option>
+        </select>
+        <select class="form-select" style="width:auto;">
+          <option>Seleccionar Módulo</option>
+          <option>Módulo 1</option>
+          <option>Módulo 2</option>
+          <option>Módulo 3</option>
+          <option>Módulo 4</option>
+          <option>Módulo 5</option>
+          <option>Módulo 6</option>
+        </select>
+        <input type="date" class="form-input" style="width:auto;" value="2026-04-10">
+        <button class="btn btn-primary">+ Nueva Inspección</button>
+      </div>
+
+      <!-- Inspection Form -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">Formulario de Inspección</div>
+
+        <div class="form-group">
+          <label class="form-label">Habitación</label>
+          <select class="form-select" style="max-width:300px;">
+            <option>Seleccionar habitación...</option>
+            <option>M1 - 101</option>
+            <option>M1 - 102</option>
+            <option>M1 - 103</option>
+            <option>M1 - 104</option>
+            <option>M1 - 105</option>
+          </select>
+        </div>
+
+        <div class="eval-section">
+          <div class="eval-label">Disponibilidad General</div>
+          <div class="radio-group">
+            <label><input type="radio" name="disponibilidad" value="bueno"> Bueno</label>
+            <label><input type="radio" name="disponibilidad" value="regular"> Regular</label>
+            <label><input type="radio" name="disponibilidad" value="malo"> Malo</label>
+          </div>
+        </div>
+
+        <div class="eval-section">
+          <div class="eval-label">Limpieza</div>
+          <div class="radio-group">
+            <label><input type="radio" name="limpieza" value="bueno"> Bueno</label>
+            <label><input type="radio" name="limpieza" value="regular"> Regular</label>
+            <label><input type="radio" name="limpieza" value="malo"> Malo</label>
+          </div>
+        </div>
+
+        <div class="eval-section">
+          <div class="eval-label">Baños</div>
+          <div class="radio-group">
+            <label><input type="radio" name="banos" value="bueno"> Bueno</label>
+            <label><input type="radio" name="banos" value="regular"> Regular</label>
+            <label><input type="radio" name="banos" value="malo"> Malo</label>
+          </div>
+        </div>
+
+        <div class="eval-section">
+          <div class="eval-label">Insumos</div>
+          <div class="radio-group">
+            <label><input type="radio" name="insumos" value="bueno"> Bueno</label>
+            <label><input type="radio" name="insumos" value="regular"> Regular</label>
+            <label><input type="radio" name="insumos" value="malo"> Malo</label>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top:16px;">
+          <label class="form-label">Observaciones</label>
+          <textarea class="form-input" rows="3" placeholder="Escribir observaciones de la inspección..."></textarea>
+        </div>
+
+        <button class="btn btn-primary" style="margin-top:8px;">Guardar Inspección</button>
+      </div>
+
+      <!-- Recent Inspections -->
+      <div class="card">
+        <div class="card-title">Últimas Inspecciones</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Habitación</th>
+              <th>Módulo</th>
+              <th>Recepcionista</th>
+              <th>Disp.</th>
+              <th>Limpieza</th>
+              <th>Baños</th>
+              <th>Insumos</th>
+              <th>Estado General</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10/04/2026</td>
+              <td>105</td>
+              <td>M1</td>
+              <td>Carolina Méndez</td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-yellow">Regular</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+            </tr>
+            <tr>
+              <td>10/04/2026</td>
+              <td>203</td>
+              <td>M2</td>
+              <td>Patricia Vega</td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-red">Malo</span></td>
+              <td><span class="badge badge-yellow">Regular</span></td>
+              <td><span class="badge badge-yellow">Regular</span></td>
+              <td><span class="badge badge-red">Malo</span></td>
+            </tr>
+            <tr>
+              <td>09/04/2026</td>
+              <td>312</td>
+              <td>M3</td>
+              <td>Carolina Méndez</td>
+              <td><span class="badge badge-yellow">Regular</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+            </tr>
+            <tr>
+              <td>09/04/2026</td>
+              <td>408</td>
+              <td>M4</td>
+              <td>Lorena Salazar</td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-green">Bueno</span></td>
+              <td><span class="badge badge-red">Malo</span></td>
+              <td><span class="badge badge-yellow">Regular</span></td>
+            </tr>
+            <tr>
+              <td>09/04/2026</td>
+              <td>501</td>
+              <td>M5</td>
+              <td>Patricia Vega</td>
+              <td><span class="badge badge-red">Malo</span></td>
+              <td><span class="badge badge-yellow">Regular</span></td>
+              <td><span class="badge badge-red">Malo</span></td>
+              <td><span class="badge badge-yellow">Regular</span></td>
+              <td><span class="badge badge-red">Malo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conciliacion - Hoteleria BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9632;</span> Dashboard</a>
+
+      <div class="nav-section">Hoteleria</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupacion</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9744;</span> Gestion Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10140;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10142;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8635;</span> Recuperacion Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Ordenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html" class="active"><span class="nav-icon">&#8644;</span> Conciliacion</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9646;</span> Gestion Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9783;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9679;</span> Gestion Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Sheila Briceno</div>
+      <div class="user-role">Administrador Hoteleria</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Conciliacion OnTracking vs Kiplas</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:32</span>
+        <button class="btn btn-sm">&#128276; Notificaciones</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Conciliacion OnTracking vs Kiplas</h1>
+      </div>
+
+      <!-- Warning Alert -->
+      <div class="alert alert-warning">
+        <span>&#9888;</span> <strong>Importante:</strong> El sistema Kiplas no exporta RUT, la conciliacion se realiza por habitacion + timestamp.
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <input type="date" class="form-input" style="width:180px;" value="2026-04-10">
+        <select class="form-select" style="width:180px;">
+          <option>Todos los Modulos</option>
+          <option>Modulo A</option>
+          <option>Modulo B</option>
+          <option>Modulo C</option>
+          <option>Modulo D</option>
+          <option>Modulo E</option>
+          <option>Modulo F</option>
+        </select>
+        <div style="flex:1;"></div>
+        <button class="btn">&#8593; Importar OnTracking</button>
+        <button class="btn">&#8593; Importar Kiplas</button>
+        <button class="btn btn-primary">&#9654; Ejecutar Conciliacion</button>
+      </div>
+
+      <!-- KPI Row -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Registros OnTracking</div>
+          <div class="kpi-value">3,364</div>
+          <div class="kpi-sub neutral">Importado hoy 07:45</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Registros Kiplas</div>
+          <div class="kpi-value">3,218</div>
+          <div class="kpi-sub neutral">Importado hoy 07:50</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Coincidencias</div>
+          <div class="kpi-value" style="color:var(--success);">3,102</div>
+          <div class="kpi-sub up">92.2% del total</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Discrepancias</div>
+          <div class="kpi-value" style="color:var(--danger);">262</div>
+          <div class="kpi-sub down">7.8% requiere revision</div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="full-width card">
+        <div class="card-title">Detalle de Conciliacion</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Habitacion</th>
+              <th>Modulo</th>
+              <th>OnTracking (Usuario)</th>
+              <th>Kiplas (Apertura)</th>
+              <th>Estado</th>
+              <th>Ultima Apertura</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>M1-101</td>
+              <td>Modulo A</td>
+              <td>Carlos Munoz R.</td>
+              <td>10/04 07:12</td>
+              <td><span class="badge badge-green">Coincide</span></td>
+              <td>07:12</td>
+            </tr>
+            <tr>
+              <td>M1-102</td>
+              <td>Modulo A</td>
+              <td>Maria Lopez S.</td>
+              <td>10/04 06:58</td>
+              <td><span class="badge badge-green">Coincide</span></td>
+              <td>06:58</td>
+            </tr>
+            <tr>
+              <td>M2-205</td>
+              <td>Modulo B</td>
+              <td>Pedro Araya M.</td>
+              <td>Sin registro</td>
+              <td><span class="badge badge-yellow">Solo OnTracking</span></td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>M2-310</td>
+              <td>Modulo B</td>
+              <td>Sin registro</td>
+              <td>10/04 05:30</td>
+              <td><span class="badge badge-red">Solo Kiplas</span></td>
+              <td>05:30</td>
+            </tr>
+            <tr>
+              <td>M3-118</td>
+              <td>Modulo C</td>
+              <td>Andrea Vega C.</td>
+              <td>10/04 22:15 (09/04)</td>
+              <td><span class="badge badge-yellow">Discrepancia</span></td>
+              <td>22:15</td>
+            </tr>
+            <tr>
+              <td>M4-401</td>
+              <td>Modulo D</td>
+              <td>Luis Soto P.</td>
+              <td>10/04 06:40</td>
+              <td><span class="badge badge-green">Coincide</span></td>
+              <td>06:40</td>
+            </tr>
+            <tr>
+              <td>M5-212</td>
+              <td>Modulo E</td>
+              <td>Jorge Diaz F.</td>
+              <td>Sin registro</td>
+              <td><span class="badge badge-yellow">Solo OnTracking</span></td>
+              <td>---</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation">
+        Kiplas (sistema chino) limita reportes a 1000 columnas. La conciliacion automatica por RUT no es posible actualmente.
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <span>Mostrando 7 de 262 discrepancias</span>
+        <div style="display:flex;gap:4px;">
+          <button class="btn btn-sm" disabled>&laquo; Anterior</button>
+          <button class="btn btn-sm">Siguiente &raquo;</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

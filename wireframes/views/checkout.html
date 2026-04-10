@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check-out - Hoteleria BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9632;</span> Dashboard</a>
+
+      <div class="nav-section">Hoteleria</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupacion</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9744;</span> Gestion Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10140;</span> Check-in</a>
+      <a href="checkout.html" class="active"><span class="nav-icon">&#10142;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8635;</span> Recuperacion Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Ordenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8644;</span> Conciliacion</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9646;</span> Gestion Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9783;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9679;</span> Gestion Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Sheila Briceno</div>
+      <div class="user-role">Administrador Hoteleria</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Check-out de Usuario</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:32</span>
+        <button class="btn btn-sm">&#128276; Notificaciones</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Check-out de Usuario</h1>
+        <div style="display:flex;gap:8px;">
+          <span class="badge badge-yellow">Check-outs pendientes hoy: 18</span>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="toolbar">
+        <div class="search-box" style="flex:1;max-width:600px;">
+          <span style="color:var(--text-light);margin-right:8px;">&#128269;</span>
+          <input type="text" placeholder="Buscar por RUT, nombre o habitacion..." value="12.456.789-0">
+        </div>
+        <button class="btn btn-primary">Buscar</button>
+      </div>
+
+      <!-- User Found Card -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title" style="display:flex;align-items:center;gap:8px;">
+          Usuario Encontrado
+          <span class="badge badge-green">Hospedado</span>
+        </div>
+        <div class="form-row">
+          <!-- Left Column -->
+          <div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">Nombre Completo</span>
+              <div style="font-size:15px;font-weight:600;margin-top:4px;">Carlos Mendoza Ramirez</div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">RUT</span>
+              <div style="font-size:14px;margin-top:4px;">12.456.789-0</div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">Empresa</span>
+              <div style="font-size:14px;margin-top:4px;">Bechtel</div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">Tipo</span>
+              <div style="font-size:14px;margin-top:4px;">Permanente - Turno 7x7</div>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">Modulo</span>
+              <div style="font-size:14px;margin-top:4px;">Modulo A</div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">Habitacion</span>
+              <div style="font-size:15px;font-weight:600;margin-top:4px;">M-A-105</div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">Fecha Ingreso</span>
+              <div style="font-size:14px;margin-top:4px;">03 Abr 2026</div>
+            </div>
+            <div style="margin-bottom:12px;">
+              <span class="form-label" style="display:inline;">Dias Hospedado</span>
+              <div style="font-size:15px;font-weight:600;margin-top:4px;">7 dias</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warning Alert -->
+      <div class="alert alert-warning">
+        &#9888; Este check-out liberara la habitacion M-A-105 y notificara a Facility para cambio de sabanas.
+      </div>
+
+      <!-- Verification Checklist -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">Verificacion de Salida</div>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
+            <input type="checkbox" checked> Tarjeta devuelta
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
+            <input type="checkbox" checked> Habitacion inspeccionada
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
+            <input type="checkbox" checked> Sin danos reportados
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
+            <input type="checkbox"> Cambio de sabanas solicitado
+          </label>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div style="display:flex;gap:12px;margin-bottom:24px;">
+        <button class="btn btn-primary">&#10003; Confirmar Check-out</button>
+        <button class="btn">Cancelar</button>
+      </div>
+
+      <!-- Recent Check-outs Table -->
+      <div class="card">
+        <div class="card-title">Ultimos Check-outs</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>RUT</th>
+              <th>Nombre</th>
+              <th>Empresa</th>
+              <th>Habitacion</th>
+              <th>Dias</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:05</td>
+              <td>16.789.432-1</td>
+              <td>Roberto Soto F.</td>
+              <td>Fluor</td>
+              <td>M-B-207</td>
+              <td>7</td>
+              <td><span class="badge badge-green">Completado</span></td>
+            </tr>
+            <tr>
+              <td>07:40</td>
+              <td>13.456.789-K</td>
+              <td>Patricia Nunez G.</td>
+              <td>Aramark Chile</td>
+              <td>M-C-315</td>
+              <td>14</td>
+              <td><span class="badge badge-green">Completado</span></td>
+            </tr>
+            <tr>
+              <td>07:22</td>
+              <td>17.234.561-8</td>
+              <td>Diego Herrera L.</td>
+              <td>Komatsu</td>
+              <td>M-A-112</td>
+              <td>10</td>
+              <td><span class="badge badge-yellow">Pendiente inspeccion</span></td>
+            </tr>
+            <tr>
+              <td>07:00</td>
+              <td>11.876.543-2</td>
+              <td>Camila Vega R.</td>
+              <td>Bechtel</td>
+              <td>M-D-408</td>
+              <td>7</td>
+              <td><span class="badge badge-green">Completado</span></td>
+            </tr>
+            <tr>
+              <td>06:35</td>
+              <td>14.567.890-3</td>
+              <td>Andres Muñoz P.</td>
+              <td>Finning</td>
+              <td>M-B-221</td>
+              <td>7</td>
+              <td><span class="badge badge-green">Completado</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <span>Mostrando 5 de 31 check-outs hoy</span>
+          <span>Pagina 1 de 7</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

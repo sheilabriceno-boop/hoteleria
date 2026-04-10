@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Empresa - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Hotelería <span>BCA</span></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">📊</span> Dashboard</a>
+
+      <div class="nav-section">Hotelería</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">🗺</span> Mapa de Ocupación</a>
+      <a href="habitaciones.html"><span class="nav-icon">🛏</span> Gestión Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">📥</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">📤</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">🔄</span> Recuperación Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html" class="active"><span class="nav-icon">🏢</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">🔧</span> Órdenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">✅</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">🧹</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">📋</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">⚖</span> Conciliación</a>
+      <a href="tarjetas.html"><span class="nav-icon">💳</span> Gestión Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">📈</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">👤</span> Gestión Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Admin BCA</div>
+      <div class="user-role">Administrador</div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Portal de Empresa</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 09:15</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header with Company Selector -->
+      <div class="page-header">
+        <h1>Portal de Empresa</h1>
+        <div style="display:flex;gap:12px;align-items:center;">
+          <select class="form-select" style="width:280px;">
+            <option>Seleccionar empresa...</option>
+            <option selected>Constructora Sigdo Koppers</option>
+            <option>Montajes Industriales SpA</option>
+            <option>Ingeniería y Servicios Ltda.</option>
+            <option>Transportes del Norte S.A.</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Cupos Asignados</div>
+          <div class="kpi-value">45</div>
+          <div class="kpi-sub neutral">Contrato vigente</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Cupos Utilizados</div>
+          <div class="kpi-value" style="color:var(--primary);">38</div>
+          <div class="kpi-sub neutral">Semana actual</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Cupos Disponibles</div>
+          <div class="kpi-value" style="color:var(--success);">7</div>
+          <div class="kpi-sub neutral">Sin asignar</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Tasa Utilización</div>
+          <div class="kpi-value" style="color:var(--warning);">84%</div>
+          <div class="kpi-sub down">-3% vs semana anterior</div>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab active">Dotación Semanal</div>
+        <div class="tab">Historial</div>
+        <div class="tab">Usuarios</div>
+      </div>
+
+      <!-- Card: Carga de Dotación Semanal -->
+      <div class="card full-width">
+        <div class="card-title">Carga de Dotación Semanal</div>
+
+        <div class="alert alert-info">
+          ℹ️ Suba el archivo Excel con la dotación de la semana. El sistema validará automáticamente los datos.
+        </div>
+
+        <!-- Upload Area -->
+        <div style="border:2px dashed var(--border);border-radius:8px;padding:40px;text-align:center;margin-bottom:16px;background:#F8FAFC;color:var(--text-light);">
+          <div style="font-size:32px;margin-bottom:8px;">📂</div>
+          <div style="font-size:14px;">Arrastre el archivo Excel aquí o haga clic para seleccionar</div>
+          <div style="font-size:12px;margin-top:4px;">Formatos aceptados: .xlsx, .xls — Máx. 5 MB</div>
+        </div>
+
+        <div style="display:flex;gap:12px;">
+          <button class="btn btn-primary">📤 Subir Dotación</button>
+          <button class="btn">📥 Descargar Plantilla</button>
+        </div>
+      </div>
+
+      <!-- Card: Dotación Actual -->
+      <div class="card full-width">
+        <div class="card-title">Dotación Actual — Semana 15/2026</div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>RUT</th>
+              <th>Turno</th>
+              <th>Tipo</th>
+              <th>Estado</th>
+              <th>Habitación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carlos Muñoz Pérez</td>
+              <td>12.345.678-9</td>
+              <td>7x7 Día</td>
+              <td><span class="badge badge-blue">Permanente</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>M3-204A</td>
+            </tr>
+            <tr>
+              <td>Ana López Ríos</td>
+              <td>15.678.234-1</td>
+              <td>7x7 Noche</td>
+              <td><span class="badge badge-blue">Permanente</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>M5-112B</td>
+            </tr>
+            <tr>
+              <td>Pedro Sánchez Vega</td>
+              <td>18.456.789-K</td>
+              <td>4x3 Día</td>
+              <td><span class="badge badge-yellow">Reemplazo</span></td>
+              <td><span class="badge badge-yellow">Pendiente</span></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td>María Fernández Díaz</td>
+              <td>11.234.567-2</td>
+              <td>7x7 Día</td>
+              <td><span class="badge badge-blue">Permanente</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>M3-205A</td>
+            </tr>
+            <tr>
+              <td>Jorge Ramírez Castro</td>
+              <td>16.789.012-3</td>
+              <td>7x7 Noche</td>
+              <td><span class="badge badge-yellow">Reemplazo</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>M5-110A</td>
+            </tr>
+            <tr>
+              <td>Claudia Torres Mora</td>
+              <td>14.567.890-4</td>
+              <td>4x3 Día</td>
+              <td><span class="badge badge-blue">Permanente</span></td>
+              <td><span class="badge badge-yellow">Pendiente</span></td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <span>Mostrando 6 de 38 registros</span>
+          <div style="display:flex;gap:4px;">
+            <button class="btn btn-sm">← Anterior</button>
+            <button class="btn btn-sm btn-primary">1</button>
+            <button class="btn btn-sm">2</button>
+            <button class="btn btn-sm">3</button>
+            <button class="btn btn-sm">Siguiente →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation">
+        Las empresas pueden cargar su dotación semanal directamente, eliminando la intervención manual del recepcionista.
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

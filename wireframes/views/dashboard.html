@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard General - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">Hotelería <span>BCA</span></div>
+      <nav class="sidebar-nav">
+
+        <a href="dashboard.html" class="active">
+          <span class="nav-icon">&#9632;</span> Dashboard
+        </a>
+
+        <div class="nav-section">Hotelería</div>
+        <a href="mapa-ocupacion.html">
+          <span class="nav-icon">&#9638;</span> Mapa de Ocupación
+        </a>
+        <a href="habitaciones.html">
+          <span class="nav-icon">&#9744;</span> Gestión Habitaciones
+        </a>
+        <a href="checkin.html">
+          <span class="nav-icon">&#8614;</span> Check-in
+        </a>
+        <a href="checkout.html">
+          <span class="nav-icon">&#8612;</span> Check-out
+        </a>
+        <a href="recuperacion-cupos.html">
+          <span class="nav-icon">&#8635;</span> Recuperación Cupos
+        </a>
+
+        <div class="nav-section">Empresas</div>
+        <a href="portal-empresa.html">
+          <span class="nav-icon">&#9881;</span> Portal Empresa
+        </a>
+
+        <div class="nav-section">Facility</div>
+        <a href="ordenes-trabajo.html">
+          <span class="nav-icon">&#9874;</span> Órdenes de Trabajo
+        </a>
+        <a href="camp-check.html">
+          <span class="nav-icon">&#10003;</span> Camp Check
+        </a>
+        <a href="productividad-aseo.html">
+          <span class="nav-icon">&#9733;</span> Productividad Aseo
+        </a>
+
+        <div class="nav-section">Operaciones</div>
+        <a href="registros.html">
+          <span class="nav-icon">&#9998;</span> Registros Operacionales
+        </a>
+        <a href="conciliacion.html">
+          <span class="nav-icon">&#8644;</span> Conciliación
+        </a>
+        <a href="tarjetas.html">
+          <span class="nav-icon">&#9871;</span> Gestión Tarjetas
+        </a>
+
+        <div class="nav-section">Reportes</div>
+        <a href="reportes.html">
+          <span class="nav-icon">&#9783;</span> Reportes
+        </a>
+
+        <div class="nav-section">Admin</div>
+        <a href="usuarios.html">
+          <span class="nav-icon">&#9775;</span> Gestión Usuarios
+        </a>
+
+      </nav>
+      <div class="sidebar-user">
+        <div class="user-name">Admin BCA</div>
+        <div class="user-role">Administrador</div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="header-title">Dashboard General</div>
+        <div class="header-actions">
+          <span style="font-size:12px; color:var(--text-light);">Última actualización: 10 Abr 2026, 08:32</span>
+          <button class="btn btn-sm">&#8635; Actualizar</button>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="content">
+
+        <!-- KPI Cards -->
+        <div class="kpi-grid">
+          <div class="kpi">
+            <div class="kpi-label">Ocupación Total</div>
+            <div class="kpi-value">91%</div>
+            <div class="kpi-sub neutral">3,364 / 3,700 camas</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Habitaciones Disponibles</div>
+            <div class="kpi-value">127</div>
+            <div class="kpi-sub down">&darr; 12 menos que ayer</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Ineficiencias Hoy</div>
+            <div class="kpi-value" style="color: var(--warning);">647</div>
+            <div class="kpi-sub down">camas no utilizadas</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Check-ins Hoy</div>
+            <div class="kpi-value">89</div>
+            <div class="kpi-sub up">&uarr; 15% vs. promedio</div>
+          </div>
+          <div class="kpi">
+            <div class="kpi-label">Órdenes Abiertas</div>
+            <div class="kpi-value">23</div>
+            <div class="kpi-sub neutral">4 urgentes</div>
+          </div>
+        </div>
+
+        <!-- Grid: Chart + Alerts -->
+        <div class="grid-2">
+
+          <!-- Ocupación por Módulo -->
+          <div class="card">
+            <div class="card-title">Ocupación por Módulo</div>
+            <div class="chart-placeholder" style="min-height: 260px; flex-direction: column; gap: 8px; padding: 20px;">
+              <div style="font-weight: 600; margin-bottom: 8px;">Gráfico de Barras Horizontales</div>
+              <div style="width:100%; max-width:400px; text-align:left; font-size:12px;">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                  <span style="width:80px;">Mod. A</span>
+                  <div style="flex:1; background:#E2E8F0; border-radius:3px; height:14px;">
+                    <div style="width:95%; background:var(--primary); height:100%; border-radius:3px;"></div>
+                  </div>
+                  <span style="width:35px; text-align:right;">95%</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                  <span style="width:80px;">Mod. B</span>
+                  <div style="flex:1; background:#E2E8F0; border-radius:3px; height:14px;">
+                    <div style="width:88%; background:var(--primary); height:100%; border-radius:3px;"></div>
+                  </div>
+                  <span style="width:35px; text-align:right;">88%</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                  <span style="width:80px;">Mod. C</span>
+                  <div style="flex:1; background:#E2E8F0; border-radius:3px; height:14px;">
+                    <div style="width:92%; background:var(--primary); height:100%; border-radius:3px;"></div>
+                  </div>
+                  <span style="width:35px; text-align:right;">92%</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                  <span style="width:80px;">Mod. D</span>
+                  <div style="flex:1; background:#E2E8F0; border-radius:3px; height:14px;">
+                    <div style="width:83%; background:var(--warning); height:100%; border-radius:3px;"></div>
+                  </div>
+                  <span style="width:35px; text-align:right;">83%</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                  <span style="width:80px;">Mod. E</span>
+                  <div style="flex:1; background:#E2E8F0; border-radius:3px; height:14px;">
+                    <div style="width:97%; background:var(--danger); height:100%; border-radius:3px;"></div>
+                  </div>
+                  <span style="width:35px; text-align:right;">97%</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:8px;">
+                  <span style="width:80px;">Mod. F</span>
+                  <div style="flex:1; background:#E2E8F0; border-radius:3px; height:14px;">
+                    <div style="width:76%; background:var(--success); height:100%; border-radius:3px;"></div>
+                  </div>
+                  <span style="width:35px; text-align:right;">76%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alertas Recientes -->
+          <div class="card">
+            <div class="card-title">Alertas Recientes</div>
+            <div class="alert alert-danger">
+              <span>&#9888;</span> <strong>Checkout vencido:</strong> J. Pérez (Hab. M3-204) - Empresa Sigdo Koppers, venció hace 2 hrs.
+            </div>
+            <div class="alert alert-warning">
+              <span>&#9888;</span> <strong>Near-miss género:</strong> Asignación Hab. M1-112 rechazada, conflicto de género detectado.
+            </div>
+            <div class="alert alert-info">
+              <span>&#9432;</span> <strong>Cupo no utilizado:</strong> 3 cupos de Bechtel sin check-in por más de 24 hrs.
+            </div>
+            <div class="alert alert-warning">
+              <span>&#9888;</span> <strong>OT abierta &gt;48h:</strong> Orden #1847 (fuga agua Mod. B piso 3) sin asignar.
+            </div>
+            <div class="alert alert-info">
+              <span>&#9432;</span> <strong>Cambio sábanas pendiente:</strong> 18 habitaciones Mod. A superan ciclo de 7 días.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Últimos Movimientos -->
+        <div class="full-width card">
+          <div class="card-title">Últimos Movimientos</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Hora</th>
+                <th>Tipo</th>
+                <th>Usuario</th>
+                <th>Empresa</th>
+                <th>Habitación</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>08:25</td>
+                <td><span class="badge badge-green">Check-in</span></td>
+                <td>Carlos Muñoz R.</td>
+                <td>Bechtel Chile</td>
+                <td>M2-305</td>
+                <td><span class="badge badge-green">Completado</span></td>
+              </tr>
+              <tr>
+                <td>08:18</td>
+                <td><span class="badge badge-blue">Asignación</span></td>
+                <td>María López S.</td>
+                <td>Sigdo Koppers</td>
+                <td>M1-118</td>
+                <td><span class="badge badge-green">Confirmado</span></td>
+              </tr>
+              <tr>
+                <td>08:10</td>
+                <td><span class="badge badge-yellow">Check-out</span></td>
+                <td>Pedro Araya M.</td>
+                <td>Strabag</td>
+                <td>M4-201</td>
+                <td><span class="badge badge-yellow">Pendiente revisión</span></td>
+              </tr>
+              <tr>
+                <td>07:55</td>
+                <td><span class="badge badge-red">Bloqueo</span></td>
+                <td>---</td>
+                <td>---</td>
+                <td>M3-410</td>
+                <td><span class="badge badge-red">Mantención</span></td>
+              </tr>
+              <tr>
+                <td>07:42</td>
+                <td><span class="badge badge-green">Check-in</span></td>
+                <td>Andrea Vega C.</td>
+                <td>Fluor Corp</td>
+                <td>M5-102</td>
+                <td><span class="badge badge-green">Completado</span></td>
+              </tr>
+              <tr>
+                <td>07:30</td>
+                <td><span class="badge badge-gray">Recuperación</span></td>
+                <td>Luis Soto P.</td>
+                <td>JJC Contratistas</td>
+                <td>M2-208</td>
+                <td><span class="badge badge-blue">Cupo reasignado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

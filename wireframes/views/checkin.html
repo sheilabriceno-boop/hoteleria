@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check-in - Hoteleria BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9632;</span> Dashboard</a>
+
+      <div class="nav-section">Hoteleria</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupacion</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9744;</span> Gestion Habitaciones</a>
+      <a href="checkin.html" class="active"><span class="nav-icon">&#10140;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10142;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8635;</span> Recuperacion Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Ordenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8644;</span> Conciliacion</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9646;</span> Gestion Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9783;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9679;</span> Gestion Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Sheila Briceno</div>
+      <div class="user-role">Administrador Hoteleria</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Check-in de Usuario</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:32</span>
+        <button class="btn btn-sm">&#128276; Notificaciones</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Check-in de Usuario</h1>
+        <div style="display:flex;gap:8px;">
+          <span class="badge badge-blue">Cupos disponibles: 142</span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab active">Nuevo Check-in</div>
+        <div class="tab">Check-ins del Dia</div>
+      </div>
+
+      <!-- Check-in Form Card -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">Datos del Check-in</div>
+        <div class="form-row" style="margin-bottom:0;">
+
+          <!-- Left Column -->
+          <div>
+            <div class="form-group">
+              <label class="form-label">RUT</label>
+              <input type="text" class="form-input" placeholder="12.345.678-9">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Nombre Completo</label>
+              <input type="text" class="form-input" placeholder="Nombre y apellidos">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Empresa</label>
+              <select class="form-select">
+                <option value="">Seleccionar empresa...</option>
+                <option>Aramark Chile</option>
+                <option>Bechtel</option>
+                <option>Fluor</option>
+                <option>Komatsu</option>
+                <option>Finning</option>
+                <option>Sodexo</option>
+                <option>ABB</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo Usuario</label>
+              <div style="display:flex;gap:20px;padding-top:4px;">
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="tipo_usuario" checked> Permanente
+                </label>
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="tipo_usuario"> Reemplazo
+                </label>
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="tipo_usuario"> Visita
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sistema de Turno</label>
+              <select class="form-select">
+                <option value="">Seleccionar turno...</option>
+                <option>7x7</option>
+                <option>10x10</option>
+                <option>14x14</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">N° Contrato</label>
+              <input type="text" class="form-input" placeholder="Ej: CT-2026-0451">
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div>
+            <div class="form-group">
+              <label class="form-label">Modulo Asignado</label>
+              <select class="form-select">
+                <option value="">Seleccionar modulo...</option>
+                <option>Modulo A</option>
+                <option>Modulo B</option>
+                <option>Modulo C</option>
+                <option>Modulo D</option>
+                <option>Modulo E</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Habitacion</label>
+              <select class="form-select">
+                <option value="">Seleccionar habitacion...</option>
+                <option>M-A-101</option>
+                <option>M-A-102</option>
+                <option>M-A-103</option>
+                <option>M-A-104</option>
+                <option>M-A-105</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Genero</label>
+              <div style="display:flex;gap:20px;padding-top:4px;">
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="genero" checked> Masculino
+                </label>
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="genero"> Femenino
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Fecha Ingreso</label>
+              <input type="date" class="form-input" value="2026-04-10">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Fecha Salida</label>
+              <input type="date" class="form-input" value="2026-04-17">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Observaciones</label>
+              <textarea class="form-input" rows="3" placeholder="Observaciones adicionales..."></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Alert -->
+        <div class="alert alert-info" style="margin-top:16px;">
+          &#9432; Para usuarios de Visita se requiere autorizacion de la Curva y de Hoteleria.
+        </div>
+
+        <!-- Buttons -->
+        <div style="display:flex;gap:12px;margin-top:16px;">
+          <button class="btn btn-primary">&#10140; Registrar Check-in</button>
+          <button class="btn">Limpiar</button>
+        </div>
+      </div>
+
+      <!-- Recent Check-ins Table -->
+      <div class="card">
+        <div class="card-title">Ultimos Check-ins Hoy</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>RUT</th>
+              <th>Nombre</th>
+              <th>Empresa</th>
+              <th>Tipo</th>
+              <th>Habitacion</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>08:15</td>
+              <td>12.456.789-0</td>
+              <td>Carlos Mendoza R.</td>
+              <td>Bechtel</td>
+              <td>Permanente</td>
+              <td>M-A-101</td>
+              <td><span class="badge badge-green">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td>07:50</td>
+              <td>15.678.234-5</td>
+              <td>Andrea Lopez S.</td>
+              <td>Fluor</td>
+              <td>Permanente</td>
+              <td>M-B-214</td>
+              <td><span class="badge badge-green">Confirmado</span></td>
+            </tr>
+            <tr>
+              <td>07:32</td>
+              <td>18.234.567-1</td>
+              <td>Jorge Ramirez T.</td>
+              <td>Komatsu</td>
+              <td>Reemplazo</td>
+              <td>M-C-310</td>
+              <td><span class="badge badge-yellow">Pendiente</span></td>
+            </tr>
+            <tr>
+              <td>07:10</td>
+              <td>11.987.654-3</td>
+              <td>Maria Gonzalez P.</td>
+              <td>Aramark Chile</td>
+              <td>Visita</td>
+              <td>M-A-108</td>
+              <td><span class="badge badge-blue">En revision</span></td>
+            </tr>
+            <tr>
+              <td>06:45</td>
+              <td>14.321.876-K</td>
+              <td>Felipe Torres M.</td>
+              <td>Finning</td>
+              <td>Permanente</td>
+              <td>M-D-402</td>
+              <td><span class="badge badge-green">Confirmado</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <span>Mostrando 5 de 23 check-ins hoy</span>
+          <span>Pagina 1 de 5</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

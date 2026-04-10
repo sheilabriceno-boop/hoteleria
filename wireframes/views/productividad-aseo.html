@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productividad Aseo - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Hotelería <span>BCA</span></div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Dashboard</div>
+      <a href="dashboard.html"><span class="nav-icon">📊</span> Dashboard</a>
+
+      <div class="nav-section">Hotelería</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">🗺️</span> Mapa de Ocupación</a>
+      <a href="habitaciones.html"><span class="nav-icon">🛏️</span> Gestión Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">📥</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">📤</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">♻️</span> Recuperación Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">🏢</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">🔧</span> Órdenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">✅</span> Camp Check</a>
+      <a href="productividad-aseo.html" class="active"><span class="nav-icon">🧹</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">📋</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">🔄</span> Conciliación</a>
+      <a href="tarjetas.html"><span class="nav-icon">💳</span> Gestión Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">📈</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">👤</span> Gestión Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Pablo Sierra</div>
+      <div class="user-role">Supervisor Aseo</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Productividad Auxiliares de Aseo</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026 · 16:45</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <input type="date" class="form-input" style="width:auto;" value="2026-04-10">
+        <span style="font-size:13px;color:var(--text-light);">a</span>
+        <input type="date" class="form-input" style="width:auto;" value="2026-04-10">
+        <select class="form-select" style="width:auto;">
+          <option>Todos los Módulos</option>
+          <option>Módulo 1</option>
+          <option>Módulo 2</option>
+          <option>Módulo 3</option>
+          <option>Módulo 4</option>
+          <option>Módulo 5</option>
+          <option>Módulo 6</option>
+        </select>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Camas Hechas Hoy</div>
+          <div class="kpi-value" style="color:var(--primary);">234</div>
+          <div class="kpi-sub up">+8% vs ayer</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Reposiciones</div>
+          <div class="kpi-value" style="color:var(--warning);">89</div>
+          <div class="kpi-sub neutral">Jabón, toallas, papel</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Limpiezas Completadas</div>
+          <div class="kpi-value" style="color:var(--success);">156</div>
+          <div class="kpi-sub up">+5% vs ayer</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Promedio por Auxiliar</div>
+          <div class="kpi-value">28.5</div>
+          <div class="kpi-sub neutral">actividades / auxiliar</div>
+        </div>
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation">Se requiere monitoreo en tiempo real de la productividad del auxiliar de aseo (Pablo Sierra)</div>
+
+      <!-- Two Column Grid -->
+      <div class="grid-2">
+
+        <!-- Ranking Auxiliares -->
+        <div class="card">
+          <div class="card-title">Ranking Auxiliares Hoy</div>
+          <table>
+            <thead>
+              <tr>
+                <th>Auxiliar</th>
+                <th>Módulo</th>
+                <th>Camas</th>
+                <th>Repos.</th>
+                <th>Limp.</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Rosa Martínez</strong></td>
+                <td>M1</td>
+                <td>18</td>
+                <td>7</td>
+                <td>12</td>
+                <td><span class="badge badge-green">37</span></td>
+              </tr>
+              <tr>
+                <td><strong>Juana Paredes</strong></td>
+                <td>M3</td>
+                <td>16</td>
+                <td>8</td>
+                <td>11</td>
+                <td><span class="badge badge-green">35</span></td>
+              </tr>
+              <tr>
+                <td><strong>Elena Campos</strong></td>
+                <td>M2</td>
+                <td>15</td>
+                <td>6</td>
+                <td>10</td>
+                <td><span class="badge badge-blue">31</span></td>
+              </tr>
+              <tr>
+                <td><strong>Carmen Silva</strong></td>
+                <td>M5</td>
+                <td>12</td>
+                <td>5</td>
+                <td>9</td>
+                <td><span class="badge badge-blue">26</span></td>
+              </tr>
+              <tr>
+                <td><strong>Marta Ríos</strong></td>
+                <td>M4</td>
+                <td>10</td>
+                <td>4</td>
+                <td>6</td>
+                <td><span class="badge badge-yellow">20</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Chart Placeholder -->
+        <div class="card">
+          <div class="card-title">Productividad por Módulo</div>
+          <div class="chart-placeholder" style="min-height:280px;">
+            [Gráfico de barras: Actividades por módulo M1-M6]
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Activity Log -->
+      <div class="card full-width">
+        <div class="card-title">Registro de Actividades</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Hora</th>
+              <th>Auxiliar</th>
+              <th>Módulo</th>
+              <th>Habitación</th>
+              <th>Actividad</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>16:30</td>
+              <td>Rosa Martínez</td>
+              <td>M1</td>
+              <td>118</td>
+              <td>Cama hecha</td>
+              <td><span class="badge badge-green">Completada</span></td>
+            </tr>
+            <tr>
+              <td>16:22</td>
+              <td>Juana Paredes</td>
+              <td>M3</td>
+              <td>305</td>
+              <td>Reposición insumos</td>
+              <td><span class="badge badge-green">Completada</span></td>
+            </tr>
+            <tr>
+              <td>16:15</td>
+              <td>Elena Campos</td>
+              <td>M2</td>
+              <td>210</td>
+              <td>Limpieza general</td>
+              <td><span class="badge badge-yellow">En progreso</span></td>
+            </tr>
+            <tr>
+              <td>16:05</td>
+              <td>Carmen Silva</td>
+              <td>M5</td>
+              <td>502</td>
+              <td>Cama hecha</td>
+              <td><span class="badge badge-green">Completada</span></td>
+            </tr>
+            <tr>
+              <td>15:50</td>
+              <td>Marta Ríos</td>
+              <td>M4</td>
+              <td>411</td>
+              <td>Reposición insumos</td>
+              <td><span class="badge badge-green">Completada</span></td>
+            </tr>
+            <tr>
+              <td>15:40</td>
+              <td>Rosa Martínez</td>
+              <td>M1</td>
+              <td>112</td>
+              <td>Limpieza general</td>
+              <td><span class="badge badge-green">Completada</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <span>Mostrando 1-6 de 479 actividades</span>
+          <div>
+            <button class="btn btn-sm">← Anterior</button>
+            <button class="btn btn-sm">Siguiente →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

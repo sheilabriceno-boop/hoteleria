@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Tarjetas - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Hotelería <span>BCA</span></div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">📊</span> Dashboard</a>
+
+      <div class="nav-section">Hotelería</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">🗺</span> Mapa de Ocupación</a>
+      <a href="habitaciones.html"><span class="nav-icon">🛏</span> Gestión Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">📥</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">📤</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">🔄</span> Recuperación Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">🏢</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">🔧</span> Órdenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">✅</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">🧹</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">📋</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">⚖</span> Conciliación</a>
+      <a href="tarjetas.html" class="active"><span class="nav-icon">💳</span> Gestión Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">📈</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">👤</span> Gestión Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Admin BCA</div>
+      <div class="user-role">Administrador</div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Gestión de Tarjetas Electrónicas</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 09:15</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Gestión de Tarjetas Electrónicas</h1>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="search-box">
+          <span style="margin-right:8px;color:var(--text-light);">🔍</span>
+          <input type="text" placeholder="Buscar por N° tarjeta, nombre o RUT...">
+        </div>
+        <select class="form-select" style="width:180px;">
+          <option>Todos los módulos</option>
+          <option>Módulo 1</option>
+          <option>Módulo 2</option>
+          <option>Módulo 3</option>
+          <option>Módulo 4</option>
+          <option>Módulo 5</option>
+        </select>
+        <select class="form-select" style="width:160px;">
+          <option>Todas</option>
+          <option>Asignada</option>
+          <option>Disponible</option>
+          <option>Perdida</option>
+        </select>
+        <div style="flex:1;"></div>
+        <button class="btn">📥 Importar Excel</button>
+        <button class="btn btn-primary">+ Nueva Tarjeta</button>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Total Tarjetas</div>
+          <div class="kpi-value">520</div>
+          <div class="kpi-sub neutral">En el sistema</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Asignadas</div>
+          <div class="kpi-value" style="color:var(--primary);">412</div>
+          <div class="kpi-sub neutral">79.2% del total</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Disponibles</div>
+          <div class="kpi-value" style="color:var(--success);">89</div>
+          <div class="kpi-sub neutral">17.1% del total</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Perdidas</div>
+          <div class="kpi-value" style="color:var(--danger);">19</div>
+          <div class="kpi-sub down">+3 este mes</div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card full-width">
+        <table>
+          <thead>
+            <tr>
+              <th>N° Tarjeta</th>
+              <th>Módulo</th>
+              <th>Asignada a</th>
+              <th>RUT</th>
+              <th>Fecha Asignación</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>T-0001</strong></td>
+              <td>Módulo 3</td>
+              <td>Carlos Muñoz Pérez</td>
+              <td>12.345.678-9</td>
+              <td>07/04/2026</td>
+              <td><span class="badge badge-green">Asignada</span></td>
+              <td><button class="btn btn-sm">Liberar</button></td>
+            </tr>
+            <tr>
+              <td><strong>T-0002</strong></td>
+              <td>Módulo 5</td>
+              <td>Ana López Ríos</td>
+              <td>15.678.234-1</td>
+              <td>07/04/2026</td>
+              <td><span class="badge badge-green">Asignada</span></td>
+              <td><button class="btn btn-sm">Liberar</button></td>
+            </tr>
+            <tr>
+              <td><strong>T-0003</strong></td>
+              <td>Módulo 1</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="badge badge-blue">Disponible</span></td>
+              <td><button class="btn btn-sm btn-primary">Asignar</button></td>
+            </tr>
+            <tr>
+              <td><strong>T-0004</strong></td>
+              <td>Módulo 2</td>
+              <td>Pedro Sánchez Vega</td>
+              <td>18.456.789-K</td>
+              <td>05/04/2026</td>
+              <td><span class="badge badge-green">Asignada</span></td>
+              <td><button class="btn btn-sm">Liberar</button></td>
+            </tr>
+            <tr>
+              <td><strong>T-0005</strong></td>
+              <td>Módulo 3</td>
+              <td>Jorge Ramírez Castro</td>
+              <td>16.789.012-3</td>
+              <td>01/03/2026</td>
+              <td><span class="badge badge-red">Perdida</span></td>
+              <td><button class="btn btn-sm">Reponer</button></td>
+            </tr>
+            <tr>
+              <td><strong>T-0006</strong></td>
+              <td>Módulo 4</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
+              <td><span class="badge badge-blue">Disponible</span></td>
+              <td><button class="btn btn-sm btn-primary">Asignar</button></td>
+            </tr>
+            <tr>
+              <td><strong>T-0007</strong></td>
+              <td>Módulo 5</td>
+              <td>Claudia Torres Mora</td>
+              <td>14.567.890-4</td>
+              <td>08/04/2026</td>
+              <td><span class="badge badge-green">Asignada</span></td>
+              <td><button class="btn btn-sm">Liberar</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pagination">
+          <span>Mostrando 7 de 520 registros</span>
+          <div style="display:flex;gap:4px;">
+            <button class="btn btn-sm">← Anterior</button>
+            <button class="btn btn-sm btn-primary">1</button>
+            <button class="btn btn-sm">2</button>
+            <button class="btn btn-sm">3</button>
+            <button class="btn btn-sm">...</button>
+            <button class="btn btn-sm">75</button>
+            <button class="btn btn-sm">Siguiente →</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation">
+        Este módulo reemplaza el registro físico de tarjetas maestras. Permite trazabilidad completa e importación masiva desde Excel.
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

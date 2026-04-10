@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa de Ocupación - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hotelería</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9633;</span> Dashboard</a>
+
+      <div class="nav-section">Hotelería</div>
+      <a href="mapa-ocupacion.html" class="active"><span class="nav-icon">&#9638;</span> Mapa de Ocupación</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9609;</span> Gestión Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10148;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10149;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8634;</span> Recuperación Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Órdenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8652;</span> Conciliación</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9645;</span> Gestión Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9636;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9823;</span> Gestión Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Admin BCA</div>
+      <div class="user-role">Administrador</div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Mapa de Ocupación</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:35</span>
+        <span class="btn btn-sm">&#128276; 3</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Mapa de Ocupación del Campamento</h1>
+        <button class="btn btn-primary">&#8635; Actualizar</button>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <input type="date" class="form-input" style="width:170px;" value="2026-04-10">
+        <select class="form-select" style="width:180px;">
+          <option>Todos los Módulos</option>
+          <option>Módulo A</option>
+          <option>Módulo B</option>
+          <option>Módulo C</option>
+          <option>Módulo D</option>
+          <option>Módulo E</option>
+          <option>Módulo F</option>
+        </select>
+        <select class="form-select" style="width:150px;">
+          <option>Todos Géneros</option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+        </select>
+        <div class="search-box">
+          <input type="text" placeholder="Buscar habitación o huésped...">
+        </div>
+      </div>
+
+      <!-- KPI Row -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Total Camas</div>
+          <div class="kpi-value">3,700</div>
+          <div class="kpi-sub neutral">Capacidad máxima del campamento</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Ocupadas</div>
+          <div class="kpi-value" style="color:var(--primary);">3,053</div>
+          <div class="kpi-sub up">+12 vs. ayer</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Disponibles</div>
+          <div class="kpi-value" style="color:var(--success);">647</div>
+          <div class="kpi-sub down">-12 vs. ayer</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Tasa Ocupación</div>
+          <div class="kpi-value">82.5%</div>
+          <div class="kpi-sub up">+0.3% vs. ayer</div>
+        </div>
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation">Las ineficiencias se calculan comparando la ocupación real vs capacidad máxima por módulo</div>
+
+      <!-- Module Cards Grid -->
+      <div class="grid-3">
+
+        <!-- Módulo A -->
+        <div class="module-card">
+          <div class="module-card-header">
+            <span class="module-card-title">Módulo A</span>
+            <span class="module-card-occ badge badge-blue">91%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:91%;background:var(--primary);"></div></div>
+          <div class="room-grid" style="margin-top:10px;">
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-reserved"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-blocked"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+          </div>
+          <div style="font-size:11px;color:var(--text-light);margin-top:8px;">564 ocupadas / 620 total</div>
+        </div>
+
+        <!-- Módulo B -->
+        <div class="module-card">
+          <div class="module-card-header">
+            <span class="module-card-title">Módulo B</span>
+            <span class="module-card-occ badge badge-blue">87%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:87%;background:var(--primary);"></div></div>
+          <div class="room-grid" style="margin-top:10px;">
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-reserved"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-blocked"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+          </div>
+          <div style="font-size:11px;color:var(--text-light);margin-top:8px;">522 ocupadas / 600 total</div>
+        </div>
+
+        <!-- Módulo C -->
+        <div class="module-card">
+          <div class="module-card-header">
+            <span class="module-card-title">Módulo C</span>
+            <span class="module-card-occ badge badge-green">78%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:78%;background:var(--success);"></div></div>
+          <div class="room-grid" style="margin-top:10px;">
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-reserved"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-reserved"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-blocked"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+          </div>
+          <div style="font-size:11px;color:var(--text-light);margin-top:8px;">468 ocupadas / 600 total</div>
+        </div>
+
+        <!-- Módulo D -->
+        <div class="module-card">
+          <div class="module-card-header">
+            <span class="module-card-title">Módulo D</span>
+            <span class="module-card-occ badge badge-blue">85%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:85%;background:var(--primary);"></div></div>
+          <div class="room-grid" style="margin-top:10px;">
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-reserved"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-blocked"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+          </div>
+          <div style="font-size:11px;color:var(--text-light);margin-top:8px;">544 ocupadas / 640 total</div>
+        </div>
+
+        <!-- Módulo E -->
+        <div class="module-card">
+          <div class="module-card-header">
+            <span class="module-card-title">Módulo E</span>
+            <span class="module-card-occ badge badge-yellow">72%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:72%;background:var(--warning);"></div></div>
+          <div class="room-grid" style="margin-top:10px;">
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-reserved"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-blocked"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+          </div>
+          <div style="font-size:11px;color:var(--text-light);margin-top:8px;">475 ocupadas / 660 total</div>
+        </div>
+
+        <!-- Módulo F -->
+        <div class="module-card">
+          <div class="module-card-header">
+            <span class="module-card-title">Módulo F</span>
+            <span class="module-card-occ badge badge-blue">83%</span>
+          </div>
+          <div class="progress-bar"><div class="progress-fill" style="width:83%;background:var(--primary);"></div></div>
+          <div class="room-grid" style="margin-top:10px;">
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-reserved"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-blocked"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-available"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+            <div class="room-cell room-occupied"></div>
+          </div>
+          <div style="font-size:11px;color:var(--text-light);margin-top:8px;">480 ocupadas / 580 total</div>
+        </div>
+
+      </div>
+
+      <!-- Legend -->
+      <div class="card" style="margin-top:8px;">
+        <div style="display:flex;gap:24px;align-items:center;font-size:12px;">
+          <span style="font-weight:600;margin-right:8px;">Leyenda:</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:var(--primary);display:inline-block;"></span> Ocupada</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:var(--success);display:inline-block;"></span> Disponible</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:var(--warning);display:inline-block;"></span> Reservada</span>
+          <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:3px;background:#94A3B8;display:inline-block;"></span> Bloqueada</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

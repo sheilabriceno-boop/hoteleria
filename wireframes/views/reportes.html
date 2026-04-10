@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes - Hoteleria BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9632;</span> Dashboard</a>
+
+      <div class="nav-section">Hoteleria</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupacion</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9744;</span> Gestion Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10140;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10142;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8635;</span> Recuperacion Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Ordenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8644;</span> Conciliacion</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9646;</span> Gestion Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html" class="active"><span class="nav-icon">&#9783;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9679;</span> Gestion Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Sheila Briceno</div>
+      <div class="user-role">Administrador Hoteleria</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Centro de Reportes</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:32</span>
+        <button class="btn btn-sm">&#128276; Notificaciones</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Centro de Reportes</h1>
+      </div>
+
+      <!-- Report Cards Grid (2x3) -->
+      <div class="grid-3" style="margin-bottom:24px;">
+
+        <!-- Card 1 -->
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;">
+          <div style="width:48px;height:48px;background:#DBEAFE;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px;">&#9783;</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:6px;">Censo Diario Consolidado</div>
+          <div style="font-size:12px;color:var(--text-light);margin-bottom:16px;">Resumen diario de ocupacion, presencia y ausencias por modulo y empresa.</div>
+          <button class="btn btn-primary btn-sm">Generar</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;">
+          <div style="width:48px;height:48px;background:#DCFCE7;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px;">&#9638;</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:6px;">Ocupacion por Modulo y Empresa</div>
+          <div style="font-size:12px;color:var(--text-light);margin-bottom:16px;">Detalle de uso de camas por modulo, empresa y tipo de contrato.</div>
+          <button class="btn btn-primary btn-sm">Generar</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;">
+          <div style="width:48px;height:48px;background:#FEF3C7;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px;">&#9888;</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:6px;">Ineficiencias y Camas Vacias</div>
+          <div style="font-size:12px;color:var(--text-light);margin-bottom:16px;">Identificacion de cupos asignados no utilizados y oportunidades de optimizacion.</div>
+          <button class="btn btn-primary btn-sm">Generar</button>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;">
+          <div style="width:48px;height:48px;background:#DBEAFE;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px;">&#9679;</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:6px;">Dotacion por Gerencia/Proyecto</div>
+          <div style="font-size:12px;color:var(--text-light);margin-bottom:16px;">Distribucion de personal por area gerencial, proyecto y estado contractual.</div>
+          <button class="btn btn-primary btn-sm">Generar</button>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;">
+          <div style="width:48px;height:48px;background:#DCFCE7;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px;">&#9733;</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:6px;">Productividad Auxiliares de Aseo</div>
+          <div style="font-size:12px;color:var(--text-light);margin-bottom:16px;">Metricas de rendimiento, habitaciones atendidas y tiempos promedio por auxiliar.</div>
+          <button class="btn btn-primary btn-sm">Generar</button>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:24px;">
+          <div style="width:48px;height:48px;background:#FEE2E2;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:12px;">&#9998;</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:6px;">Ordenes de Trabajo - Resumen</div>
+          <div style="font-size:12px;color:var(--text-light);margin-bottom:16px;">Estado consolidado de ordenes de trabajo: abiertas, en progreso y cerradas.</div>
+          <button class="btn btn-primary btn-sm">Generar</button>
+        </div>
+
+      </div>
+
+      <!-- Reportes Recientes -->
+      <div class="full-width card">
+        <div class="card-title">Reportes Recientes</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Reporte</th>
+              <th>Generado por</th>
+              <th>Formato</th>
+              <th>Descargar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10/04/2026</td>
+              <td>Censo Diario Consolidado</td>
+              <td>Sheila Briceno</td>
+              <td><span class="badge badge-green">Excel</span></td>
+              <td><button class="btn btn-sm">&#8595; Descargar</button></td>
+            </tr>
+            <tr>
+              <td>09/04/2026</td>
+              <td>Ineficiencias y Camas Vacias</td>
+              <td>Daniel Hazan</td>
+              <td><span class="badge badge-blue">PDF</span></td>
+              <td><button class="btn btn-sm">&#8595; Descargar</button></td>
+            </tr>
+            <tr>
+              <td>08/04/2026</td>
+              <td>Ocupacion por Modulo y Empresa</td>
+              <td>Sheila Briceno</td>
+              <td><span class="badge badge-green">Excel</span></td>
+              <td><button class="btn btn-sm">&#8595; Descargar</button></td>
+            </tr>
+            <tr>
+              <td>07/04/2026</td>
+              <td>Productividad Auxiliares de Aseo</td>
+              <td>Carlos Munoz</td>
+              <td><span class="badge badge-gray">CSV</span></td>
+              <td><button class="btn btn-sm">&#8595; Descargar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

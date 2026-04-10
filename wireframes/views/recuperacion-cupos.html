@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperacion de Cupos - Hoteleria BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9632;</span> Dashboard</a>
+
+      <div class="nav-section">Hoteleria</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupacion</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9744;</span> Gestion Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10140;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10142;</span> Check-out</a>
+      <a href="recuperacion-cupos.html" class="active"><span class="nav-icon">&#8635;</span> Recuperacion Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Ordenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8644;</span> Conciliacion</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9646;</span> Gestion Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9783;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9679;</span> Gestion Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Sheila Briceno</div>
+      <div class="user-role">Administrador Hoteleria</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Recuperacion de Cupos</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:32</span>
+        <button class="btn btn-sm">&#128276; Notificaciones</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Recuperacion de Cupos</h1>
+      </div>
+
+      <!-- Info Alert -->
+      <div class="alert alert-info">
+        <span>&#9432;</span> Los cupos no utilizados pueden ser reasignados a empresas que necesitan aumentar su dotacion.
+      </div>
+
+      <!-- KPI Row -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Cupos Totales</div>
+          <div class="kpi-value">3,700</div>
+          <div class="kpi-sub neutral">Capacidad campamento BCA</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">En Uso Eficiente</div>
+          <div class="kpi-value" style="color:var(--success);">3,053</div>
+          <div class="kpi-sub up">82.5% del total</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Subutilizados</div>
+          <div class="kpi-value" style="color:var(--warning);">412</div>
+          <div class="kpi-sub down">11.1% del total</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Recuperables</div>
+          <div class="kpi-value" style="color:var(--danger);">235</div>
+          <div class="kpi-sub down">6.4% disponibles para reasignar</div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="full-width card">
+        <div class="card-title">Detalle por Empresa</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Empresa</th>
+              <th>Cupos Asignados</th>
+              <th>Cupos Usados</th>
+              <th>Diferencia</th>
+              <th>% Utilizacion</th>
+              <th>Dias Sin Uso</th>
+              <th>Accion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bechtel Chile</td>
+              <td>820</td>
+              <td>785</td>
+              <td>35</td>
+              <td><span class="badge badge-green">95.7%</span></td>
+              <td>1</td>
+              <td><span style="color:var(--text-light);font-size:12px;">---</span></td>
+            </tr>
+            <tr>
+              <td>Sigdo Koppers</td>
+              <td>640</td>
+              <td>598</td>
+              <td>42</td>
+              <td><span class="badge badge-green">93.4%</span></td>
+              <td>2</td>
+              <td><span style="color:var(--text-light);font-size:12px;">---</span></td>
+            </tr>
+            <tr style="background:#FEF3C7;">
+              <td>Strabag</td>
+              <td>580</td>
+              <td>489</td>
+              <td style="color:var(--danger);font-weight:600;">91</td>
+              <td><span class="badge badge-yellow">84.3%</span></td>
+              <td style="color:var(--danger);font-weight:600;">5</td>
+              <td><button class="btn btn-danger btn-sm">Recuperar</button></td>
+            </tr>
+            <tr style="background:#FEF3C7;">
+              <td>JJC Contratistas</td>
+              <td>450</td>
+              <td>362</td>
+              <td style="color:var(--danger);font-weight:600;">88</td>
+              <td><span class="badge badge-red">80.4%</span></td>
+              <td style="color:var(--danger);font-weight:600;">7</td>
+              <td><button class="btn btn-danger btn-sm">Recuperar</button></td>
+            </tr>
+            <tr>
+              <td>Fluor Corp</td>
+              <td>520</td>
+              <td>492</td>
+              <td>28</td>
+              <td><span class="badge badge-green">94.6%</span></td>
+              <td>1</td>
+              <td><span style="color:var(--text-light);font-size:12px;">---</span></td>
+            </tr>
+            <tr style="background:#FEF3C7;">
+              <td>Salfa Corp</td>
+              <td>380</td>
+              <td>306</td>
+              <td style="color:var(--danger);font-weight:600;">74</td>
+              <td><span class="badge badge-red">80.5%</span></td>
+              <td style="color:var(--danger);font-weight:600;">4</td>
+              <td><button class="btn btn-danger btn-sm">Recuperar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation">
+        Hoteleria puede reasignar cupos no utilizados a otras empresas que necesiten aumentar dotacion de permanentes.
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <span>Mostrando 6 de 6 empresas</span>
+        <div style="display:flex;gap:4px;">
+          <button class="btn btn-sm" disabled>&laquo; Anterior</button>
+          <button class="btn btn-sm" disabled>Siguiente &raquo;</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

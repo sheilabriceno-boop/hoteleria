@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Órdenes de Trabajo - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">Hotelería <span>BCA</span></div>
+    <nav class="sidebar-nav">
+      <div class="nav-section">Dashboard</div>
+      <a href="dashboard.html"><span class="nav-icon">📊</span> Dashboard</a>
+
+      <div class="nav-section">Hotelería</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">🗺️</span> Mapa de Ocupación</a>
+      <a href="habitaciones.html"><span class="nav-icon">🛏️</span> Gestión Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">📥</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">📤</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">♻️</span> Recuperación Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">🏢</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html" class="active"><span class="nav-icon">🔧</span> Órdenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">✅</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">🧹</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">📋</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">🔄</span> Conciliación</a>
+      <a href="tarjetas.html"><span class="nav-icon">💳</span> Gestión Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">📈</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">👤</span> Gestión Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Mauricio Arancibia</div>
+      <div class="user-role">Supervisor Facility</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Órdenes de Trabajo - Facility</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026 · 14:32</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="search-box">
+          <span>🔍</span>
+          <input type="text" placeholder="Buscar OT por número, módulo o solicitante...">
+        </div>
+        <select class="form-select" style="width:auto;">
+          <option>Todas</option>
+          <option>Abierta</option>
+          <option>En Progreso</option>
+          <option>Cerrada</option>
+          <option>Vencida</option>
+        </select>
+        <select class="form-select" style="width:auto;">
+          <option>Todas</option>
+          <option>Limpieza</option>
+          <option>Reparación</option>
+          <option>Cambio Colchón</option>
+          <option>Cambio Cortina</option>
+          <option>Reposición Insumos</option>
+        </select>
+        <button class="btn btn-primary">+ Nueva OT</button>
+      </div>
+
+      <!-- KPIs -->
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="kpi-label">Abiertas</div>
+          <div class="kpi-value" style="color:var(--warning);">23</div>
+          <div class="kpi-sub neutral">Sin asignar: 5</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">En Progreso</div>
+          <div class="kpi-value" style="color:var(--primary);">15</div>
+          <div class="kpi-sub neutral">Asignadas hoy: 8</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Cerradas Hoy</div>
+          <div class="kpi-value" style="color:var(--success);">31</div>
+          <div class="kpi-sub up">+12% vs ayer</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Tiempo Promedio</div>
+          <div class="kpi-value">4.2h</div>
+          <div class="kpi-sub down">+0.3h vs semana anterior</div>
+        </div>
+      </div>
+
+      <!-- Alert -->
+      <div class="alert alert-danger">
+        ⚠️ 3 órdenes llevan más de 48 horas abiertas sin asignar
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation">Mauricio Arancibia (Facility) requiere trazabilidad profunda con alertas de tiempo de respuesta</div>
+
+      <!-- Table -->
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th>N° OT</th>
+              <th>Tipo</th>
+              <th>Módulo / Hab.</th>
+              <th>Solicitante</th>
+              <th>Empresa</th>
+              <th>Asignado a</th>
+              <th>Fecha Creación</th>
+              <th>Estado</th>
+              <th>Prioridad</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>OT-1042</strong></td>
+              <td>Reparación</td>
+              <td>M3 / 312</td>
+              <td>Carlos Muñoz</td>
+              <td>Bechtel</td>
+              <td>Juan Pérez</td>
+              <td>08/04/2026</td>
+              <td><span class="badge badge-yellow">En Progreso</span></td>
+              <td><span class="badge badge-red">Alta</span></td>
+              <td><a href="#" class="btn btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+              <td><strong>OT-1041</strong></td>
+              <td>Limpieza</td>
+              <td>M1 / 105</td>
+              <td>Ana Torres</td>
+              <td>Sodexo</td>
+              <td>María López</td>
+              <td>08/04/2026</td>
+              <td><span class="badge badge-green">Cerrada</span></td>
+              <td><span class="badge badge-gray">Baja</span></td>
+              <td><a href="#" class="btn btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+              <td><strong>OT-1040</strong></td>
+              <td>Cambio Colchón</td>
+              <td>M5 / 501</td>
+              <td>Roberto Díaz</td>
+              <td>Strabag</td>
+              <td>—</td>
+              <td>07/04/2026</td>
+              <td><span class="badge badge-red">Vencida</span></td>
+              <td><span class="badge badge-red">Alta</span></td>
+              <td><a href="#" class="btn btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+              <td><strong>OT-1039</strong></td>
+              <td>Reposición Insumos</td>
+              <td>M2 / 214</td>
+              <td>Lucía Fernández</td>
+              <td>Aramark</td>
+              <td>Pedro Soto</td>
+              <td>07/04/2026</td>
+              <td><span class="badge badge-blue">Abierta</span></td>
+              <td><span class="badge badge-yellow">Media</span></td>
+              <td><a href="#" class="btn btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+              <td><strong>OT-1038</strong></td>
+              <td>Cambio Cortina</td>
+              <td>M4 / 408</td>
+              <td>Diego Rivas</td>
+              <td>Finning</td>
+              <td>—</td>
+              <td>06/04/2026</td>
+              <td><span class="badge badge-red">Vencida</span></td>
+              <td><span class="badge badge-yellow">Media</span></td>
+              <td><a href="#" class="btn btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+              <td><strong>OT-1037</strong></td>
+              <td>Reparación</td>
+              <td>M1 / 118</td>
+              <td>Patricia Vega</td>
+              <td>Komatsu</td>
+              <td>Juan Pérez</td>
+              <td>06/04/2026</td>
+              <td><span class="badge badge-yellow">En Progreso</span></td>
+              <td><span class="badge badge-gray">Baja</span></td>
+              <td><a href="#" class="btn btn-sm">Ver</a></td>
+            </tr>
+            <tr>
+              <td><strong>OT-1036</strong></td>
+              <td>Limpieza</td>
+              <td>M6 / 603</td>
+              <td>Martín Rojas</td>
+              <td>SSK</td>
+              <td>—</td>
+              <td>05/04/2026</td>
+              <td><span class="badge badge-red">Vencida</span></td>
+              <td><span class="badge badge-red">Alta</span></td>
+              <td><a href="#" class="btn btn-sm">Ver</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          <span>Mostrando 1-7 de 69 órdenes</span>
+          <div>
+            <button class="btn btn-sm">← Anterior</button>
+            <button class="btn btn-sm">Siguiente →</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

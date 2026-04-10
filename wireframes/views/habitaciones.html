@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Habitaciones - Hotelería BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hotelería</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9633;</span> Dashboard</a>
+
+      <div class="nav-section">Hotelería</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupación</a>
+      <a href="habitaciones.html" class="active"><span class="nav-icon">&#9609;</span> Gestión Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10148;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10149;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8634;</span> Recuperación Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Órdenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8652;</span> Conciliación</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9645;</span> Gestión Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9636;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9823;</span> Gestión Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Admin BCA</div>
+      <div class="user-role">Administrador</div>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Gestión de Habitaciones</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:35</span>
+        <span class="btn btn-sm">&#128276; 3</span>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Gestión de Habitaciones</h1>
+        <button class="btn btn-primary">+ Nueva Habitación</button>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="search-box">
+          <input type="text" placeholder="Buscar por N° habitación...">
+        </div>
+        <select class="form-select" style="width:170px;">
+          <option>Todos los Módulos</option>
+          <option>Módulo A</option>
+          <option>Módulo B</option>
+          <option>Módulo C</option>
+          <option>Módulo D</option>
+          <option>Módulo E</option>
+          <option>Módulo F</option>
+        </select>
+        <select class="form-select" style="width:160px;">
+          <option>Todas</option>
+          <option>Ocupada</option>
+          <option>Disponible</option>
+          <option>Reservada</option>
+          <option>Bloqueada</option>
+        </select>
+        <select class="form-select" style="width:150px;">
+          <option>Todos</option>
+          <option>Masculino</option>
+          <option>Femenino</option>
+        </select>
+        <button class="btn">&#8635; Limpiar Filtros</button>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="grid-3">
+        <div class="kpi">
+          <div class="kpi-label">Habitaciones Ocupadas</div>
+          <div class="kpi-value" style="color:var(--primary);">1,245</div>
+          <div class="kpi-sub neutral">de 1,520 habitaciones totales</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Habitaciones Disponibles</div>
+          <div class="kpi-value" style="color:var(--success);">218</div>
+          <div class="kpi-sub neutral">listas para asignación</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-label">Bloqueadas / Reservadas</div>
+          <div class="kpi-value" style="color:var(--warning);">57</div>
+          <div class="kpi-sub neutral">32 reservadas + 25 bloqueadas</div>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div class="card full-width">
+        <table>
+          <thead>
+            <tr>
+              <th>Habitación</th>
+              <th>Módulo</th>
+              <th>Capacidad</th>
+              <th>Ocupantes</th>
+              <th>Estado</th>
+              <th>Género</th>
+              <th>Último Censo</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>A-101</strong></td>
+              <td>Módulo A</td>
+              <td>4</td>
+              <td>4</td>
+              <td><span class="badge badge-blue">Ocupada</span></td>
+              <td>Masculino</td>
+              <td>09 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-danger">Bloquear</button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>A-205</strong></td>
+              <td>Módulo A</td>
+              <td>2</td>
+              <td>0</td>
+              <td><span class="badge badge-green">Disponible</span></td>
+              <td>Femenino</td>
+              <td>08 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-danger">Bloquear</button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>B-112</strong></td>
+              <td>Módulo B</td>
+              <td>4</td>
+              <td>3</td>
+              <td><span class="badge badge-blue">Ocupada</span></td>
+              <td>Masculino</td>
+              <td>09 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-danger">Bloquear</button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>C-308</strong></td>
+              <td>Módulo C</td>
+              <td>2</td>
+              <td>0</td>
+              <td><span class="badge badge-yellow">Reservada</span></td>
+              <td>Femenino</td>
+              <td>07 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-danger">Bloquear</button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>C-415</strong></td>
+              <td>Módulo C</td>
+              <td>4</td>
+              <td>4</td>
+              <td><span class="badge badge-blue">Ocupada</span></td>
+              <td>Masculino</td>
+              <td>09 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-danger">Bloquear</button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>D-220</strong></td>
+              <td>Módulo D</td>
+              <td>2</td>
+              <td>0</td>
+              <td><span class="badge badge-gray">Bloqueada</span></td>
+              <td>Masculino</td>
+              <td>05 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-success">Desbloquear</button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>E-103</strong></td>
+              <td>Módulo E</td>
+              <td>4</td>
+              <td>2</td>
+              <td><span class="badge badge-blue">Ocupada</span></td>
+              <td>Femenino</td>
+              <td>09 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-danger">Bloquear</button>
+              </td>
+            </tr>
+            <tr>
+              <td><strong>F-510</strong></td>
+              <td>Módulo F</td>
+              <td>2</td>
+              <td>0</td>
+              <td><span class="badge badge-green">Disponible</span></td>
+              <td>Masculino</td>
+              <td>08 Abr 2026</td>
+              <td>
+                <button class="btn btn-sm">Ver</button>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm btn-danger">Bloquear</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Pagination -->
+        <div class="pagination">
+          <span>Mostrando 1-8 de 1,520 habitaciones</span>
+          <div style="display:flex;gap:4px;">
+            <button class="btn btn-sm" disabled>&laquo; Anterior</button>
+            <button class="btn btn-sm btn-primary">1</button>
+            <button class="btn btn-sm">2</button>
+            <button class="btn btn-sm">3</button>
+            <button class="btn btn-sm">...</button>
+            <button class="btn btn-sm">190</button>
+            <button class="btn btn-sm">Siguiente &raquo;</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

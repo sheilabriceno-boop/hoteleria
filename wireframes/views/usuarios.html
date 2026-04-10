@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestion Usuarios - Hoteleria BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9632;</span> Dashboard</a>
+
+      <div class="nav-section">Hoteleria</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupacion</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9744;</span> Gestion Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10140;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10142;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8635;</span> Recuperacion Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Ordenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8644;</span> Conciliacion</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9646;</span> Gestion Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9783;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html" class="active"><span class="nav-icon">&#9679;</span> Gestion Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Sheila Briceno</div>
+      <div class="user-role">Administrador Hoteleria</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Gestion de Usuarios del Sistema</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:32</span>
+        <button class="btn btn-sm">&#128276; Notificaciones</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Gestion de Usuarios del Sistema</h1>
+        <button class="btn btn-primary">+ Nuevo Usuario</button>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="search-box">
+          <span>&#128269;</span>
+          <input type="text" placeholder="Buscar por nombre o email...">
+        </div>
+        <select class="form-select" style="width:200px;">
+          <option>Todos los Roles</option>
+          <option>Admin</option>
+          <option>Recepcionista</option>
+          <option>Facility Manager</option>
+          <option>Supervisor Aseo</option>
+          <option>Admin Empresa</option>
+          <option>Gerencia</option>
+        </select>
+      </div>
+
+      <!-- Table -->
+      <div class="full-width card">
+        <div class="card-title">Usuarios Registrados</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Rol</th>
+              <th>Estado</th>
+              <th>Ultimo Acceso</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Sheila Briceno</td>
+              <td>s.briceno@aramark.cl</td>
+              <td><span class="badge badge-blue">Admin</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>10/04/2026 08:30</td>
+              <td>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm">Permisos</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Daniel Hazan</td>
+              <td>d.hazan@aramark.cl</td>
+              <td><span class="badge badge-blue">Admin</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>10/04/2026 07:55</td>
+              <td>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm">Permisos</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Carolina Mendez</td>
+              <td>c.mendez@aramark.cl</td>
+              <td><span class="badge badge-green">Recepcionista</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>10/04/2026 06:00</td>
+              <td>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm">Permisos</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Roberto Figueroa</td>
+              <td>r.figueroa@aramark.cl</td>
+              <td><span class="badge badge-yellow">Facility Manager</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>09/04/2026 18:20</td>
+              <td>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm">Permisos</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Patricia Rojas</td>
+              <td>p.rojas@aramark.cl</td>
+              <td><span class="badge badge-gray">Supervisor Aseo</span></td>
+              <td><span class="badge badge-green">Activo</span></td>
+              <td>10/04/2026 05:45</td>
+              <td>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm">Permisos</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Miguel Torres</td>
+              <td>m.torres@bechtel.com</td>
+              <td><span class="badge badge-yellow">Admin Empresa</span></td>
+              <td><span class="badge badge-red">Inactivo</span></td>
+              <td>02/04/2026 14:10</td>
+              <td>
+                <button class="btn btn-sm">Editar</button>
+                <button class="btn btn-sm">Activar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <span>Mostrando 6 de 6 usuarios</span>
+        <div style="display:flex;gap:4px;">
+          <button class="btn btn-sm" disabled>&laquo; Anterior</button>
+          <button class="btn btn-sm" disabled>Siguiente &raquo;</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

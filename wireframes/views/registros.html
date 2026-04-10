@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registros Operacionales - Hoteleria BCA</title>
+  <link rel="stylesheet" href="../css/wireframe.css">
+</head>
+<body>
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <nav class="sidebar-nav">
+      <a href="dashboard.html"><span class="nav-icon">&#9632;</span> Dashboard</a>
+
+      <div class="nav-section">Hoteleria</div>
+      <a href="mapa-ocupacion.html"><span class="nav-icon">&#9638;</span> Mapa de Ocupacion</a>
+      <a href="habitaciones.html"><span class="nav-icon">&#9744;</span> Gestion Habitaciones</a>
+      <a href="checkin.html"><span class="nav-icon">&#10140;</span> Check-in</a>
+      <a href="checkout.html"><span class="nav-icon">&#10142;</span> Check-out</a>
+      <a href="recuperacion-cupos.html"><span class="nav-icon">&#8635;</span> Recuperacion Cupos</a>
+
+      <div class="nav-section">Empresas</div>
+      <a href="portal-empresa.html"><span class="nav-icon">&#9881;</span> Portal Empresa</a>
+
+      <div class="nav-section">Facility</div>
+      <a href="ordenes-trabajo.html"><span class="nav-icon">&#9998;</span> Ordenes de Trabajo</a>
+      <a href="camp-check.html"><span class="nav-icon">&#10003;</span> Camp Check</a>
+      <a href="productividad-aseo.html"><span class="nav-icon">&#9733;</span> Productividad Aseo</a>
+
+      <div class="nav-section">Operaciones</div>
+      <a href="registros.html" class="active"><span class="nav-icon">&#9776;</span> Registros Operacionales</a>
+      <a href="conciliacion.html"><span class="nav-icon">&#8644;</span> Conciliacion</a>
+      <a href="tarjetas.html"><span class="nav-icon">&#9646;</span> Gestion Tarjetas</a>
+
+      <div class="nav-section">Reportes</div>
+      <a href="reportes.html"><span class="nav-icon">&#9783;</span> Reportes</a>
+
+      <div class="nav-section">Admin</div>
+      <a href="usuarios.html"><span class="nav-icon">&#9679;</span> Gestion Usuarios</a>
+    </nav>
+    <div class="sidebar-user">
+      <div class="user-name">Sheila Briceno</div>
+      <div class="user-role">Administrador Hoteleria</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <div class="main">
+    <header class="header">
+      <div class="header-title">Registros Operacionales</div>
+      <div class="header-actions">
+        <span style="font-size:12px;color:var(--text-light);">10 Abr 2026, 08:32</span>
+        <button class="btn btn-sm">&#128276; Notificaciones</button>
+      </div>
+    </header>
+
+    <div class="content">
+
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>Registros Operacionales</h1>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab active">Censo Diario</div>
+        <div class="tab">Eventos Seguridad</div>
+        <div class="tab">Quejas</div>
+        <div class="tab">Solicitudes</div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <input type="date" class="form-input" style="width:180px;" value="2026-04-10">
+        <select class="form-select" style="width:180px;">
+          <option>Todos los Modulos</option>
+          <option>Modulo A</option>
+          <option>Modulo B</option>
+          <option>Modulo C</option>
+          <option>Modulo D</option>
+          <option>Modulo E</option>
+          <option>Modulo F</option>
+        </select>
+        <div style="flex:1;"></div>
+        <button class="btn">&#128196; CSV</button>
+        <button class="btn">&#128202; Excel</button>
+      </div>
+
+      <!-- Table -->
+      <div class="full-width card">
+        <div class="card-title">Censo del Dia - 10/04/2026</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Modulo</th>
+              <th>Empresa</th>
+              <th>Turno</th>
+              <th>Usuarios Registrados</th>
+              <th>Usuarios Presentes</th>
+              <th>Diferencia</th>
+              <th>Observaciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Modulo A</td>
+              <td>Bechtel Chile</td>
+              <td>Dia</td>
+              <td>620</td>
+              <td>598</td>
+              <td style="color:var(--danger);">-22</td>
+              <td>3 permisos medicos, 19 ausencias sin justificar</td>
+            </tr>
+            <tr>
+              <td>Modulo A</td>
+              <td>Sigdo Koppers</td>
+              <td>Noche</td>
+              <td>185</td>
+              <td>182</td>
+              <td style="color:var(--danger);">-3</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Modulo B</td>
+              <td>Strabag</td>
+              <td>Dia</td>
+              <td>540</td>
+              <td>521</td>
+              <td style="color:var(--danger);">-19</td>
+              <td>5 bajadas anticipadas</td>
+            </tr>
+            <tr>
+              <td>Modulo C</td>
+              <td>Fluor Corp</td>
+              <td>Dia</td>
+              <td>480</td>
+              <td>475</td>
+              <td style="color:var(--danger);">-5</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Modulo D</td>
+              <td>JJC Contratistas</td>
+              <td>Dia</td>
+              <td>410</td>
+              <td>392</td>
+              <td style="color:var(--danger);">-18</td>
+              <td>Grupo en capacitacion externa</td>
+            </tr>
+            <tr>
+              <td>Modulo E</td>
+              <td>Aramark Servicios</td>
+              <td>Dia</td>
+              <td>320</td>
+              <td>318</td>
+              <td style="color:var(--danger);">-2</td>
+              <td>---</td>
+            </tr>
+            <tr>
+              <td>Modulo F</td>
+              <td>Salfa Corp</td>
+              <td>Dia</td>
+              <td>245</td>
+              <td>230</td>
+              <td style="color:var(--danger);">-15</td>
+              <td>Rotacion de personal programada</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr style="font-weight:700; background:#F1F5F9;">
+              <td colspan="3">TOTAL</td>
+              <td>2,800</td>
+              <td>2,716</td>
+              <td style="color:var(--danger);">-84</td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <span>Mostrando 7 de 7 registros</span>
+        <div style="display:flex;gap:4px;">
+          <button class="btn btn-sm" disabled>&laquo; Anterior</button>
+          <button class="btn btn-sm" disabled>Siguiente &raquo;</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

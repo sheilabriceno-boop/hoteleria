@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotelería BCA - Wireframes</title>
+  <link rel="stylesheet" href="css/wireframe.css">
+  <style>
+    body { background: var(--bg); }
+    .index-header { background: var(--sidebar-bg); color: #fff; padding: 40px 24px; text-align: center; }
+    .index-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+    .index-header h1 span { color: var(--sidebar-active); }
+    .index-header p { color: var(--sidebar-text); font-size: 14px; }
+    .index-content { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+    .section-title { font-size: 13px; text-transform: uppercase; letter-spacing: .5px; color: var(--text-light); margin-bottom: 12px; margin-top: 32px; font-weight: 600; }
+    .section-title:first-child { margin-top: 0; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; margin-bottom: 8px; }
+    .view-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; padding: 20px; transition: box-shadow .15s, border-color .15s; }
+    .view-card:hover { border-color: var(--primary); box-shadow: 0 2px 8px rgba(37,99,235,.1); }
+    .view-card h3 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .view-card p { font-size: 13px; color: var(--text-light); margin-bottom: 12px; }
+    .view-card a { font-size: 13px; color: var(--primary); text-decoration: none; font-weight: 500; }
+    .view-card a:hover { text-decoration: underline; }
+    .stats-bar { display: flex; gap: 32px; justify-content: center; margin-top: 16px; }
+    .stats-bar div { text-align: center; }
+    .stats-bar .num { font-size: 24px; font-weight: 700; color: var(--sidebar-active); }
+    .stats-bar .label { font-size: 12px; color: var(--sidebar-text); }
+  </style>
+</head>
+<body>
+
+  <div class="index-header">
+    <h1>Hotelería <span>BCA</span> - Wireframes</h1>
+    <p>Sistema de Gestión Hotelera - Campamento BCA - Aramark Chile</p>
+    <div class="stats-bar">
+      <div><div class="num">16</div><div class="label">Vistas</div></div>
+      <div><div class="num">6</div><div class="label">Secciones</div></div>
+      <div><div class="num">3,700+</div><div class="label">Personas</div></div>
+      <div><div class="num">162+</div><div class="label">Empresas</div></div>
+    </div>
+  </div>
+
+  <div class="index-content">
+
+    <!-- Dashboard -->
+    <div class="section-title">Dashboard</div>
+    <div class="cards-grid">
+      <div class="view-card">
+        <h3>Dashboard General</h3>
+        <p>Vista principal con KPIs de ocupación, alertas y últimos movimientos del campamento.</p>
+        <a href="views/dashboard.html">Abrir vista &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Hotelería -->
+    <div class="section-title">Hotelería</div>
+    <div class="cards-grid">
+      <div class="view-card">
+        <h3>Mapa de Ocupación</h3>
+        <p>Visualización en tiempo real de la ocupación por módulo, piso y habitación.</p>
+        <a href="views/mapa-ocupacion.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Gestión Habitaciones</h3>
+        <p>Administración de habitaciones, asignación de camas y estados de limpieza.</p>
+        <a href="views/gestion-habitaciones.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Check-in</h3>
+        <p>Registro de ingreso de trabajadores con validación de reserva y empresa.</p>
+        <a href="views/checkin.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Check-out</h3>
+        <p>Registro de salida con revisión de habitación y liberación de cupo.</p>
+        <a href="views/checkout.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Recuperación de Cupos</h3>
+        <p>Gestión de cupos no utilizados y reasignación de camas disponibles.</p>
+        <a href="views/recuperacion-cupos.html">Abrir vista &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Empresas -->
+    <div class="section-title">Empresas</div>
+    <div class="cards-grid">
+      <div class="view-card">
+        <h3>Portal Empresa</h3>
+        <p>Gestión de empresas contratistas, cupos asignados y ocupación por empresa.</p>
+        <a href="views/portal-empresa.html">Abrir vista &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Facility -->
+    <div class="section-title">Facility</div>
+    <div class="cards-grid">
+      <div class="view-card">
+        <h3>Órdenes de Trabajo</h3>
+        <p>Gestión de OTs de mantención, aseo y reparaciones en el campamento.</p>
+        <a href="views/ordenes-trabajo.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Camp Check</h3>
+        <p>Rondas de inspección del campamento con checklist y registro fotográfico.</p>
+        <a href="views/camp-check.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Productividad Aseo</h3>
+        <p>Métricas de productividad del equipo de aseo por módulo y turno.</p>
+        <a href="views/productividad-aseo.html">Abrir vista &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Operaciones -->
+    <div class="section-title">Operaciones</div>
+    <div class="cards-grid">
+      <div class="view-card">
+        <h3>Registros Operacionales</h3>
+        <p>Bitácora diaria de eventos operacionales, novedades y observaciones.</p>
+        <a href="views/registros-operacionales.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Conciliación</h3>
+        <p>Conciliación de ocupación entre sistema, acceso y comedor.</p>
+        <a href="views/conciliacion.html">Abrir vista &rarr;</a>
+      </div>
+      <div class="view-card">
+        <h3>Gestión Tarjetas</h3>
+        <p>Administración de tarjetas de acceso, asignación y bloqueo.</p>
+        <a href="views/gestion-tarjetas.html">Abrir vista &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Reportes -->
+    <div class="section-title">Reportes</div>
+    <div class="cards-grid">
+      <div class="view-card">
+        <h3>Reportes</h3>
+        <p>Generación de reportes de ocupación, ineficiencias y gestión operacional.</p>
+        <a href="views/reportes.html">Abrir vista &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Admin -->
+    <div class="section-title">Admin</div>
+    <div class="cards-grid">
+      <div class="view-card">
+        <h3>Gestión Usuarios</h3>
+        <p>Administración de usuarios del sistema, roles y permisos de acceso.</p>
+        <a href="views/gestion-usuarios.html">Abrir vista &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
