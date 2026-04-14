@@ -37,6 +37,8 @@ body { font-family: 'Inter', 'Segoe UI', sans-serif; background: var(--bg); colo
 .sidebar-nav a:hover { background: #334155; color: #fff; }
 .sidebar-nav a.active { background: var(--sidebar-active); color: #fff; border-radius: 0; }
 .sidebar-nav .nav-icon { width: 20px; text-align: center; font-size: 16px; }
+.sidebar-nav .fi { width: 20px; text-align: center; font-size: 15px; flex-shrink: 0; }
+.fi { vertical-align: -2px; }
 .sidebar-nav .nav-section { padding: 16px 20px 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: #64748B; }
 .sidebar-user { padding: 12px 20px; border-top: 1px solid #334155; font-size: 12px; }
 .sidebar-user .user-name { color: #fff; font-weight: 600; }
