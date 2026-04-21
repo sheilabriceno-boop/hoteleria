@@ -53,26 +53,82 @@
 
     <div class="content">
 
-      <!-- Page Header with Company Selector -->
+      <!-- Page Header with Company + Camp Selector -->
       <div class="page-header">
         <h1>Portal de Empresa</h1>
         <div style="display:flex;gap:12px;align-items:center;">
           <select class="form-select" style="width:280px;">
             <option>Seleccionar empresa...</option>
-            <option selected>Constructora Sigdo Koppers</option>
-            <option>Montajes Industriales SpA</option>
-            <option>Ingeniería y Servicios Ltda.</option>
-            <option>Transportes del Norte S.A.</option>
+            <option selected>Constructora El Sauce</option>
+            <option>Bechtel Chile</option>
+            <option>Sigdo Koppers</option>
+            <option>METSO Industrial Services</option>
+            <option>TECNOLOGIAS COBRA LIMITADA</option>
+            <option>CONTITECH CHILE SA</option>
+            <option>NTC</option>
+            <option>Gesta S.A.</option>
+            <option>Thecne SpA</option>
           </select>
+          <select class="form-select" style="width:180px;">
+            <option>Todos los campamentos</option>
+            <option selected>Campamento 5400 (BCA)</option>
+            <option>VMH</option>
+            <option>VVL</option>
+            <option>VCA</option>
+          </select>
+          <select class="form-select" style="width:140px;">
+            <option>Semana 19 · W19</option>
+            <option>Semana 18 · W18</option>
+            <option>Semana 17 · W17</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Empresa Info Card -->
+      <div class="card" style="margin-bottom:16px;">
+        <div class="card-title">Información de la Empresa</div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; font-size:13px;">
+          <div>
+            <div class="form-label" style="display:inline;">Razón Social</div>
+            <div style="font-weight:600;margin-top:2px;">Constructora El Sauce S.A.</div>
+          </div>
+          <div>
+            <div class="form-label" style="display:inline;">N° Contrato</div>
+            <div style="font-weight:600;margin-top:2px;">9100072641</div>
+          </div>
+          <div>
+            <div class="form-label" style="display:inline;">Gerencia General</div>
+            <div style="font-weight:600;margin-top:2px;">Cátodos</div>
+          </div>
+          <div>
+            <div class="form-label" style="display:inline;">Área</div>
+            <div style="font-weight:600;margin-top:2px;">Proyecto</div>
+          </div>
+          <div>
+            <div class="form-label" style="display:inline;">Contract Owner (CO)</div>
+            <div style="margin-top:2px;">Juan Cotal · juan.cotal1@bhp.com</div>
+          </div>
+          <div>
+            <div class="form-label" style="display:inline;">ADC</div>
+            <div style="margin-top:2px;">Katherine Flores · katherine.flores1@bhp.com</div>
+          </div>
+          <div>
+            <div class="form-label" style="display:inline;">Focal Point Empresa</div>
+            <div style="margin-top:2px;">Mario Pérez · +56 9 8765 4321</div>
+          </div>
+          <div>
+            <div class="form-label" style="display:inline;">Clasificación CC</div>
+            <div style="margin-top:2px;"><span class="badge badge-blue">OPEX</span> · 7017608</div>
+          </div>
         </div>
       </div>
 
       <!-- KPIs -->
       <div class="kpi-grid">
         <div class="kpi">
-          <div class="kpi-label">Cupos Asignados</div>
-          <div class="kpi-value">45</div>
-          <div class="kpi-sub neutral">Contrato vigente</div>
+          <div class="kpi-label">Cupos Autorizados (Curva)</div>
+          <div class="kpi-value">46</div>
+          <div class="kpi-sub neutral">W19 · 2x Día + 2x Noche</div>
         </div>
         <div class="kpi">
           <div class="kpi-label">Cupos Utilizados</div>
@@ -81,29 +137,116 @@
         </div>
         <div class="kpi">
           <div class="kpi-label">Cupos Disponibles</div>
-          <div class="kpi-value" style="color:var(--success);">7</div>
+          <div class="kpi-value" style="color:var(--success);">8</div>
           <div class="kpi-sub neutral">Sin asignar</div>
         </div>
         <div class="kpi">
           <div class="kpi-label">Tasa Utilización</div>
-          <div class="kpi-value" style="color:var(--warning);">84%</div>
+          <div class="kpi-value" style="color:var(--warning);">83%</div>
           <div class="kpi-sub down">-3% vs semana anterior</div>
         </div>
       </div>
 
       <!-- Tabs -->
       <div class="tabs">
-        <div class="tab active">Dotación Semanal</div>
-        <div class="tab">Historial</div>
+        <div class="tab active">Curva de Poblamiento</div>
+        <div class="tab">Dotación Semanal</div>
+        <div class="tab">Historial Solicitudes</div>
         <div class="tab">Usuarios</div>
       </div>
 
-      <!-- Card: Carga de Dotación Semanal -->
+      <!-- Card: Solicitar Cupo -->
       <div class="card full-width">
-        <div class="card-title">Carga de Dotación Semanal</div>
+        <div class="card-title">Nueva Solicitud de Cupo — Curva de Poblamiento</div>
+
+        <div class="alert alert-warning">
+          <i class="fi fi-rr-triangle-warning"></i> <strong>Recordatorio:</strong> Las solicitudes se reciben solo hasta el <strong>martes 18:00 hrs</strong>. Anticipación mínima: <strong>96 horas</strong>. Centro de Costos es obligatorio.
+        </div>
+
+        <div class="form-row">
+          <div>
+            <div class="form-group">
+              <label class="form-label">ID Solicitud <span style="color:var(--text-light); font-size:11px;">(auto)</span></label>
+              <input type="text" class="form-input" value="GC0926048" disabled>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Campamento <span style="color:var(--danger);">*</span></label>
+              <select class="form-select">
+                <option>Campamento 5400</option>
+                <option>VMH</option>
+                <option>VVL</option>
+                <option>VCA</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sistema de Turno <span style="color:var(--danger);">*</span></label>
+              <select class="form-select">
+                <option>4x3</option>
+                <option>7x7</option>
+                <option>8x6</option>
+                <option>10x10</option>
+                <option>14x14</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo Turno <span style="color:var(--danger);">*</span></label>
+              <select class="form-select">
+                <option>2x Día</option>
+                <option>2x Noche</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <div class="form-group">
+              <label class="form-label">Tipo Contrato <span style="color:var(--danger);">*</span></label>
+              <select class="form-select">
+                <option>Permanente</option>
+                <option>Spot</option>
+                <option>SD/PM</option>
+                <option>Outage</option>
+                <option>Proyecto</option>
+                <option>LSTS</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Centro de Costo <span style="color:var(--danger);">*</span></label>
+              <input type="text" class="form-input" placeholder="Ej: 7017608">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Clasificación</label>
+              <div style="display:flex;gap:20px;padding-top:4px;">
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="clasif" checked> OPEX
+                </label>
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="clasif"> CAPEX
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">N° de Cupos Solicitados</label>
+              <input type="number" class="form-input" value="5" min="1">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Descripción</label>
+          <input type="text" class="form-input" placeholder="Ej: Operación y Mantención Planta de Pebble">
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:12px;">
+          <button class="btn btn-primary"><i class="fi fi-rr-upload"></i> Enviar Solicitud</button>
+          <button class="btn">Guardar Borrador</button>
+        </div>
+      </div>
+
+      <!-- Card: Carga Masiva de Dotación -->
+      <div class="card full-width">
+        <div class="card-title">Carga Masiva de Dotación Semanal</div>
 
         <div class="alert alert-info">
-          ℹ️ Suba el archivo Excel con la dotación de la semana. El sistema validará automáticamente los datos.
+          <i class="fi fi-rr-info"></i> Suba el archivo Excel siguiendo el formato oficial <strong>FORMATO REPORTABILIDAD HOTELERIA</strong> (31 columnas).
         </div>
 
         <!-- Upload Area -->
@@ -114,8 +257,8 @@
         </div>
 
         <div style="display:flex;gap:12px;">
-          <button class="btn btn-primary">📤 Subir Dotación</button>
-          <button class="btn">📥 Descargar Plantilla</button>
+          <button class="btn btn-primary"><i class="fi fi-rr-upload"></i> Subir Dotación</button>
+          <button class="btn"><i class="fi fi-rr-download"></i> Descargar Plantilla Oficial</button>
         </div>
       </div>
 
@@ -126,62 +269,76 @@
         <table>
           <thead>
             <tr>
-              <th>Nombre</th>
+              <th>Nombre Huésped</th>
               <th>RUT</th>
-              <th>Turno</th>
-              <th>Tipo</th>
+              <th>Sistema Turno</th>
+              <th>Tipo Turno</th>
+              <th>Tipo Contrato</th>
+              <th>Llegada → Bajada</th>
+              <th>Habitación / Cama</th>
               <th>Estado</th>
-              <th>Habitación</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Carlos Muñoz Pérez</td>
               <td>12.345.678-9</td>
-              <td>7x7 Día</td>
+              <td>7x7</td>
+              <td>2x Día</td>
               <td><span class="badge badge-blue">Permanente</span></td>
+              <td>08 Abr → 14 Abr</td>
+              <td>M3-204 / P</td>
               <td><span class="badge badge-green">Activo</span></td>
-              <td>M3-204A</td>
             </tr>
             <tr>
               <td>Ana López Ríos</td>
               <td>15.678.234-1</td>
-              <td>7x7 Noche</td>
+              <td>7x7</td>
+              <td>2x Noche</td>
               <td><span class="badge badge-blue">Permanente</span></td>
+              <td>08 Abr → 14 Abr</td>
+              <td>M5-112 / V</td>
               <td><span class="badge badge-green">Activo</span></td>
-              <td>M5-112B</td>
             </tr>
             <tr>
               <td>Pedro Sánchez Vega</td>
               <td>18.456.789-K</td>
-              <td>4x3 Día</td>
-              <td><span class="badge badge-yellow">Reemplazo</span></td>
-              <td><span class="badge badge-yellow">Pendiente</span></td>
+              <td>4x3</td>
+              <td>2x Día</td>
+              <td><span class="badge badge-yellow">Spot</span></td>
+              <td>10 Abr → 12 Abr</td>
               <td>—</td>
+              <td><span class="badge badge-yellow">Pendiente</span></td>
             </tr>
             <tr>
               <td>María Fernández Díaz</td>
               <td>11.234.567-2</td>
-              <td>7x7 Día</td>
+              <td>7x7</td>
+              <td>2x Día</td>
               <td><span class="badge badge-blue">Permanente</span></td>
+              <td>08 Abr → 14 Abr</td>
+              <td>M3-205 / P</td>
               <td><span class="badge badge-green">Activo</span></td>
-              <td>M3-205A</td>
             </tr>
             <tr>
               <td>Jorge Ramírez Castro</td>
               <td>16.789.012-3</td>
-              <td>7x7 Noche</td>
-              <td><span class="badge badge-yellow">Reemplazo</span></td>
+              <td>14x14</td>
+              <td>2x Noche</td>
+              <td><span class="badge badge-red">Outage</span></td>
+              <td>06 Abr → 19 Abr</td>
+              <td>M5-110 / P</td>
               <td><span class="badge badge-green">Activo</span></td>
-              <td>M5-110A</td>
             </tr>
             <tr>
               <td>Claudia Torres Mora</td>
               <td>14.567.890-4</td>
-              <td>4x3 Día</td>
-              <td><span class="badge badge-blue">Permanente</span></td>
-              <td><span class="badge badge-yellow">Pendiente</span></td>
+              <td>10x10</td>
+              <td>2x Día</td>
+              <td><span class="badge badge-blue">LSTS</span></td>
+              <td>09 Abr → 18 Abr</td>
               <td>—</td>
+              <td><span class="badge badge-yellow">Pendiente</span></td>
             </tr>
           </tbody>
         </table>
@@ -200,7 +357,7 @@
 
       <!-- Annotation -->
       <div class="annotation">
-        Las empresas pueden cargar su dotación semanal directamente, eliminando la intervención manual del recepcionista.
+        Las empresas cargan solicitudes de curva y dotación según calendario oficial MEL (corte martes 18:00 hrs). Reemplaza el proceso actual vía SharePoint/correo. Código azul/amarillo/rojo indica nueva/modificada/eliminada.
       </div>
 
     </div>

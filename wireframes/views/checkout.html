@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check-out - Hoteleria BCA</title>
+  <title>Check-out - Hotelería BCA</title>
   <link rel="stylesheet" href="../css/wireframe.css">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
@@ -12,7 +12,7 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <div class="sidebar-logo">Hotelería <span>BCA</span></div>
     <nav class="sidebar-nav">
         <a href="dashboard.html"><i class="fi fi-rr-dashboard"></i> Dashboard</a>
         <div class="nav-section">Hotelería</div>
@@ -37,8 +37,8 @@
         <a href="usuarios.html"><i class="fi fi-rr-user"></i> Gestión Usuarios</a>
       </nav>
     <div class="sidebar-user">
-      <div class="user-name">Sheila Briceno</div>
-      <div class="user-role">Administrador Hoteleria</div>
+      <div class="user-name">Sheila Briceño</div>
+      <div class="user-role">Administrador Hotelería</div>
     </div>
   </aside>
 
@@ -58,15 +58,38 @@
       <div class="page-header">
         <h1>Check-out de Usuario</h1>
         <div style="display:flex;gap:8px;">
-          <span class="badge badge-yellow">Check-outs pendientes hoy: 18</span>
+          <span class="badge badge-yellow">Automáticos OnTracking/Keyplus: 12</span>
+          <span class="badge badge-blue">Pendientes revisión terreno: 6</span>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab active">Check-out Manual</div>
+        <div class="tab">Automáticos OnTracking / Keyplus</div>
+        <div class="tab">Pendientes Revisión Terreno</div>
+      </div>
+
+      <!-- Process Steps -->
+      <div class="card" style="margin-bottom:16px; padding:12px 20px;">
+        <div style="display:flex; gap:0; align-items:center; font-size:12px; flex-wrap:wrap;">
+          <span style="background:var(--success); color:#fff; padding:4px 10px; border-radius:12px; font-weight:600;">1. Fin estadía</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:var(--success); color:#fff; padding:4px 10px; border-radius:12px; font-weight:600;">2. Check-out automático (OnTracking/Keyplus)</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:var(--primary); color:#fff; padding:4px 10px; border-radius:12px; font-weight:600;">3. Revisión terreno</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:#E2E8F0; color:var(--text); padding:4px 10px; border-radius:12px;">4. Liberar habitación</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:#E2E8F0; color:var(--text); padding:4px 10px; border-radius:12px;">5. Derivar a limpieza</span>
         </div>
       </div>
 
       <!-- Search Bar -->
       <div class="toolbar">
         <div class="search-box" style="flex:1;max-width:600px;">
-          <span style="color:var(--text-light);margin-right:8px;">&#128269;</span>
-          <input type="text" placeholder="Buscar por RUT, nombre o habitacion..." value="12.456.789-0">
+          <i class="fi fi-rr-search"></i>
+          <input type="text" placeholder="Buscar por RUT, nombre o habitación..." value="12.456.789-0">
         </div>
         <button class="btn btn-primary">Buscar</button>
       </div>
@@ -76,82 +99,118 @@
         <div class="card-title" style="display:flex;align-items:center;gap:8px;">
           Usuario Encontrado
           <span class="badge badge-green">Hospedado</span>
+          <span class="badge badge-yellow">Check-out automático detectado</span>
         </div>
         <div class="form-row">
           <!-- Left Column -->
           <div>
             <div style="margin-bottom:12px;">
-              <span class="form-label" style="display:inline;">Nombre Completo</span>
-              <div style="font-size:15px;font-weight:600;margin-top:4px;">Carlos Mendoza Ramirez</div>
+              <span class="form-label" style="display:inline;">Nombre Huésped</span>
+              <div style="font-size:15px;font-weight:600;margin-top:4px;">Carlos Mendoza Ramírez</div>
             </div>
             <div style="margin-bottom:12px;">
               <span class="form-label" style="display:inline;">RUT</span>
               <div style="font-size:14px;margin-top:4px;">12.456.789-0</div>
             </div>
             <div style="margin-bottom:12px;">
-              <span class="form-label" style="display:inline;">Empresa</span>
-              <div style="font-size:14px;margin-top:4px;">Bechtel</div>
+              <span class="form-label" style="display:inline;">Empresa / Contrato</span>
+              <div style="font-size:14px;margin-top:4px;">Bechtel · GC0526001 · CC 7017105</div>
             </div>
             <div style="margin-bottom:12px;">
-              <span class="form-label" style="display:inline;">Tipo</span>
-              <div style="font-size:14px;margin-top:4px;">Permanente - Turno 7x7</div>
+              <span class="form-label" style="display:inline;">Sistema / Tipo Turno</span>
+              <div style="font-size:14px;margin-top:4px;">7x7 · 2x Día · Permanente</div>
             </div>
           </div>
           <!-- Right Column -->
           <div>
             <div style="margin-bottom:12px;">
-              <span class="form-label" style="display:inline;">Modulo</span>
-              <div style="font-size:14px;margin-top:4px;">Modulo A</div>
+              <span class="form-label" style="display:inline;">Módulo / Habitación / Cama</span>
+              <div style="font-size:15px;font-weight:600;margin-top:4px;">Módulo A · M-A-105 · P (Principal)</div>
             </div>
             <div style="margin-bottom:12px;">
-              <span class="form-label" style="display:inline;">Habitacion</span>
-              <div style="font-size:15px;font-weight:600;margin-top:4px;">M-A-105</div>
+              <span class="form-label" style="display:inline;">N° Casillero</span>
+              <div style="font-size:14px;margin-top:4px;">CAS-A-105-1</div>
             </div>
             <div style="margin-bottom:12px;">
-              <span class="form-label" style="display:inline;">Fecha Ingreso</span>
-              <div style="font-size:14px;margin-top:4px;">03 Abr 2026</div>
+              <span class="form-label" style="display:inline;">Día Llegada / Noche Bajada</span>
+              <div style="font-size:14px;margin-top:4px;">03 Abr 2026 → 10 Abr 2026</div>
             </div>
             <div style="margin-bottom:12px;">
-              <span class="form-label" style="display:inline;">Dias Hospedado</span>
-              <div style="font-size:15px;font-weight:600;margin-top:4px;">7 dias</div>
+              <span class="form-label" style="display:inline;">Últ. apertura Keyplus</span>
+              <div style="font-size:14px;margin-top:4px;">09/04/2026 22:18</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Warning Alert -->
-      <div class="alert alert-warning">
-        &#9888; Este check-out liberara la habitacion M-A-105 y notificara a Facility para cambio de sabanas.
+      <!-- Info Alert check-out automático -->
+      <div class="alert alert-info">
+        <i class="fi fi-rr-info"></i> <strong>Check-out automático OnTracking/Keyplus:</strong> sistema detectó fin de estadía. Se requiere confirmar revisión en terreno antes de liberar la habitación.
       </div>
 
-      <!-- Verification Checklist -->
+      <!-- Revisión en Terreno -->
       <div class="card" style="margin-bottom:24px;">
-        <div class="card-title">Verificacion de Salida</div>
-        <div style="display:flex;flex-direction:column;gap:14px;">
+        <div class="card-title">Revisión en Terreno</div>
+        <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
           <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
-            <input type="checkbox" checked> Tarjeta devuelta
+            <input type="checkbox" checked> Tarjeta Keyplus devuelta
           </label>
           <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
-            <input type="checkbox" checked> Habitacion inspeccionada
+            <input type="checkbox" checked> Llave casillero devuelta
           </label>
           <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
-            <input type="checkbox" checked> Sin danos reportados
+            <input type="checkbox" checked> Habitación inspeccionada
           </label>
           <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
-            <input type="checkbox"> Cambio de sabanas solicitado
+            <input type="checkbox" checked> Pertenencias retiradas
           </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
+            <input type="checkbox" checked> Sin daños reportados
+          </label>
+          <label style="display:flex;align-items:center;gap:10px;font-size:13px;cursor:pointer;">
+            <input type="checkbox"> Casillero liberado y disponible
+          </label>
+        </div>
+        <div class="form-group" style="margin-top:16px;">
+          <label class="form-label">Observaciones / Hallazgos</label>
+          <textarea class="form-input" rows="2" placeholder="Daños, objetos olvidados, requerimientos especiales..."></textarea>
+        </div>
+      </div>
+
+      <!-- Derivaciones automáticas -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">Derivaciones Automáticas</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer; padding:10px; background:var(--success-light); border-radius:6px;">
+            <input type="checkbox" checked> OT Limpieza (Aseo)
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer; padding:10px; background:var(--success-light); border-radius:6px;">
+            <input type="checkbox" checked> OT Cambio de Sábanas
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer; padding:10px; background:#E2E8F0; border-radius:6px;">
+            <input type="checkbox"> OT Facility (daños)
+          </label>
+        </div>
+        <div class="alert alert-warning" style="margin-top:12px;">
+          <i class="fi fi-rr-triangle-warning"></i> Al confirmar, se generarán automáticamente las OTs marcadas y se <strong>liberará el cupo</strong> en OnTracking, Keyplus, SAMTECH y SharePoint.
         </div>
       </div>
 
       <!-- Action Buttons -->
       <div style="display:flex;gap:12px;margin-bottom:24px;">
-        <button class="btn btn-primary">&#10003; Confirmar Check-out</button>
+        <button class="btn btn-primary"><i class="fi fi-rr-check"></i> Confirmar Check-out y Liberar Habitación</button>
+        <button class="btn">Posponer revisión</button>
         <button class="btn">Cancelar</button>
       </div>
 
+      <!-- Annotation -->
+      <div class="annotation">
+        Flujo según procedimiento <strong>PR-MEL-OPFC-001 v12</strong>. El check-out automático detectado por OnTracking/Keyplus requiere revisión en terreno por un Recepcionista antes de liberar la habitación y derivar a limpieza.
+      </div>
+
       <!-- Recent Check-outs Table -->
-      <div class="card">
-        <div class="card-title">Ultimos Check-outs</div>
+      <div class="card" style="margin-top:24px;">
+        <div class="card-title">Últimos Check-outs</div>
         <table>
           <thead>
             <tr>
@@ -159,8 +218,9 @@
               <th>RUT</th>
               <th>Nombre</th>
               <th>Empresa</th>
-              <th>Habitacion</th>
-              <th>Dias</th>
+              <th>Hab / Cama</th>
+              <th>Origen</th>
+              <th>OTs generadas</th>
               <th>Estado</th>
             </tr>
           </thead>
@@ -170,51 +230,56 @@
               <td>16.789.432-1</td>
               <td>Roberto Soto F.</td>
               <td>Fluor</td>
-              <td>M-B-207</td>
-              <td>7</td>
-              <td><span class="badge badge-green">Completado</span></td>
+              <td>M-B-207 / P</td>
+              <td><span class="badge badge-blue">Automático</span></td>
+              <td>Aseo + Sábanas</td>
+              <td><span class="badge badge-green">Liberada</span></td>
             </tr>
             <tr>
               <td>07:40</td>
               <td>13.456.789-K</td>
-              <td>Patricia Nunez G.</td>
+              <td>Patricia Núñez G.</td>
               <td>Aramark Chile</td>
-              <td>M-C-315</td>
-              <td>14</td>
-              <td><span class="badge badge-green">Completado</span></td>
+              <td>M-C-315 / V</td>
+              <td><span class="badge badge-gray">Manual</span></td>
+              <td>Aseo + Sábanas</td>
+              <td><span class="badge badge-green">Liberada</span></td>
             </tr>
             <tr>
               <td>07:22</td>
               <td>17.234.561-8</td>
               <td>Diego Herrera L.</td>
               <td>Komatsu</td>
-              <td>M-A-112</td>
-              <td>10</td>
-              <td><span class="badge badge-yellow">Pendiente inspeccion</span></td>
+              <td>M-A-112 / P</td>
+              <td><span class="badge badge-blue">Automático</span></td>
+              <td>Aseo + Facility</td>
+              <td><span class="badge badge-yellow">Pendiente revisión</span></td>
             </tr>
             <tr>
               <td>07:00</td>
               <td>11.876.543-2</td>
               <td>Camila Vega R.</td>
               <td>Bechtel</td>
-              <td>M-D-408</td>
-              <td>7</td>
-              <td><span class="badge badge-green">Completado</span></td>
+              <td>M-D-408 / V</td>
+              <td><span class="badge badge-gray">Manual</span></td>
+              <td>Aseo + Sábanas</td>
+              <td><span class="badge badge-green">Liberada</span></td>
             </tr>
             <tr>
               <td>06:35</td>
               <td>14.567.890-3</td>
-              <td>Andres Muñoz P.</td>
+              <td>Andrés Muñoz P.</td>
               <td>Finning</td>
-              <td>M-B-221</td>
-              <td>7</td>
-              <td><span class="badge badge-green">Completado</span></td>
+              <td>M-B-221 / P</td>
+              <td><span class="badge badge-blue">Automático</span></td>
+              <td>Aseo + Sábanas</td>
+              <td><span class="badge badge-green">Liberada</span></td>
             </tr>
           </tbody>
         </table>
         <div class="pagination">
           <span>Mostrando 5 de 31 check-outs hoy</span>
-          <span>Pagina 1 de 7</span>
+          <span>Página 1 de 7</span>
         </div>
       </div>
 

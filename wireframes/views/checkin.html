@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check-in - Hoteleria BCA</title>
+  <title>Check-in - Hotelería BCA</title>
   <link rel="stylesheet" href="../css/wireframe.css">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
@@ -12,7 +12,7 @@
 
   <!-- Sidebar -->
   <aside class="sidebar">
-    <div class="sidebar-logo"><span>Hoteleria</span> BCA</div>
+    <div class="sidebar-logo">Hotelería <span>BCA</span></div>
     <nav class="sidebar-nav">
         <a href="dashboard.html"><i class="fi fi-rr-dashboard"></i> Dashboard</a>
         <div class="nav-section">Hotelería</div>
@@ -37,8 +37,8 @@
         <a href="usuarios.html"><i class="fi fi-rr-user"></i> Gestión Usuarios</a>
       </nav>
     <div class="sidebar-user">
-      <div class="user-name">Sheila Briceno</div>
-      <div class="user-role">Administrador Hoteleria</div>
+      <div class="user-name">Sheila Briceño</div>
+      <div class="user-role">Administrador Hotelería</div>
     </div>
   </aside>
 
@@ -59,18 +59,42 @@
         <h1>Check-in de Usuario</h1>
         <div style="display:flex;gap:8px;">
           <span class="badge badge-blue">Cupos disponibles: 142</span>
+          <span class="badge badge-gray">Procedimiento PR-MEL-OPFC-001 v12</span>
+        </div>
+      </div>
+
+      <!-- Process Steps (from flujograma oficial) -->
+      <div class="card" style="margin-bottom:16px; padding:12px 20px;">
+        <div style="display:flex; gap:0; align-items:center; font-size:12px; flex-wrap:wrap;">
+          <span style="background:var(--success); color:#fff; padding:4px 10px; border-radius:12px; font-weight:600;">1. Validar curva y 96h</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:var(--success); color:#fff; padding:4px 10px; border-radius:12px; font-weight:600;">2. Verificar OnTracking + Keyplus</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:var(--primary); color:#fff; padding:4px 10px; border-radius:12px; font-weight:600;">3. Chequear condiciones habitación</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:#E2E8F0; color:var(--text); padding:4px 10px; border-radius:12px;">4. Enrolar Keyplus</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:#E2E8F0; color:var(--text); padding:4px 10px; border-radius:12px;">5. Firma Reglamento</span>
+          <span style="color:var(--text-light); margin:0 6px;">→</span>
+          <span style="background:#E2E8F0; color:var(--text); padding:4px 10px; border-radius:12px;">6. Entrega asignación</span>
         </div>
       </div>
 
       <!-- Tabs -->
       <div class="tabs">
         <div class="tab active">Nuevo Check-in</div>
-        <div class="tab">Check-ins del Dia</div>
+        <div class="tab">Check-ins del Día</div>
+        <div class="tab">Dobles Asignaciones</div>
+      </div>
+
+      <!-- Validación 96h Alert -->
+      <div class="alert alert-warning">
+        <i class="fi fi-rr-triangle-warning"></i> <strong>Validación 96h:</strong> Solicitud recibida el 06/04/2026 08:32 · Llegada solicitada 10/04/2026 08:00 · <strong>✓ Cumple 96 horas</strong>
       </div>
 
       <!-- Check-in Form Card -->
       <div class="card" style="margin-bottom:24px;">
-        <div class="card-title">Datos del Check-in</div>
+        <div class="card-title">1. Datos del Huésped</div>
         <div class="form-row" style="margin-bottom:0;">
 
           <!-- Left Column -->
@@ -80,21 +104,27 @@
               <input type="text" class="form-input" placeholder="12.345.678-9">
             </div>
             <div class="form-group">
-              <label class="form-label">Nombre Completo</label>
+              <label class="form-label">Nombre Huésped</label>
               <input type="text" class="form-input" placeholder="Nombre y apellidos">
             </div>
             <div class="form-group">
-              <label class="form-label">Empresa</label>
-              <select class="form-select">
-                <option value="">Seleccionar empresa...</option>
-                <option>Aramark Chile</option>
-                <option>Bechtel</option>
-                <option>Fluor</option>
-                <option>Komatsu</option>
-                <option>Finning</option>
-                <option>Sodexo</option>
-                <option>ABB</option>
-              </select>
+              <label class="form-label">Sexo</label>
+              <div style="display:flex;gap:20px;padding-top:4px;">
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="sexo" checked> Masculino
+                </label>
+                <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
+                  <input type="radio" name="sexo"> Femenino
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Número Contacto</label>
+              <input type="text" class="form-input" placeholder="+56 9 ...">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cargo</label>
+              <input type="text" class="form-input" placeholder="Ej: Operador Planta">
             </div>
             <div class="form-group">
               <label class="form-label">Tipo Usuario</label>
@@ -110,86 +140,214 @@
                 </label>
               </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Sistema de Turno</label>
-              <select class="form-select">
-                <option value="">Seleccionar turno...</option>
-                <option>7x7</option>
-                <option>10x10</option>
-                <option>14x14</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">N° Contrato</label>
-              <input type="text" class="form-input" placeholder="Ej: CT-2026-0451">
-            </div>
           </div>
 
           <!-- Right Column -->
           <div>
             <div class="form-group">
-              <label class="form-label">Modulo Asignado</label>
+              <label class="form-label">Empresa</label>
               <select class="form-select">
-                <option value="">Seleccionar modulo...</option>
-                <option>Modulo A</option>
-                <option>Modulo B</option>
-                <option>Modulo C</option>
-                <option>Modulo D</option>
-                <option>Modulo E</option>
+                <option value="">Seleccionar empresa...</option>
+                <option>Constructora El Sauce</option>
+                <option>Bechtel Chile</option>
+                <option>Sigdo Koppers</option>
+                <option>Fluor Corp</option>
+                <option>Komatsu</option>
+                <option>Finning</option>
+                <option>Sodexo</option>
+                <option>Nexxo</option>
+                <option>METSO Industrial Services</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Habitacion</label>
+              <label class="form-label">N° de Contrato / ID Solicitud</label>
+              <input type="text" class="form-input" placeholder="Ej: GC0526001">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Centro de Costo <span style="color:var(--danger);">*</span></label>
+              <input type="text" class="form-input" placeholder="Ej: 7017105">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sistema de Turno</label>
               <select class="form-select">
-                <option value="">Seleccionar habitacion...</option>
+                <option value="">Seleccionar...</option>
+                <option>4x3</option>
+                <option>7x7</option>
+                <option>8x6</option>
+                <option>10x10</option>
+                <option>14x14</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo Turno</label>
+              <select class="form-select">
+                <option>2x Día</option>
+                <option>2x Noche</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipo Contrato</label>
+              <select class="form-select">
+                <option>Permanente</option>
+                <option>Spot</option>
+                <option>SD/PM</option>
+                <option>Outage</option>
+                <option>Proyecto</option>
+                <option>LSTS</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección 2: Asignación de Habitación -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">2. Asignación de Habitación <span style="font-size:11px; color:var(--text-light); font-weight:400;">(validado contra OnTracking + Keyplus)</span></div>
+        <div class="form-row" style="margin-bottom:0;">
+          <div>
+            <div class="form-group">
+              <label class="form-label">Módulo</label>
+              <select class="form-select">
+                <option>Módulo A</option>
+                <option>Módulo B</option>
+                <option>Módulo C</option>
+                <option>Módulo D</option>
+                <option>Módulo E</option>
+                <option>Módulo F</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Habitación</label>
+              <select class="form-select">
                 <option>M-A-101</option>
                 <option>M-A-102</option>
                 <option>M-A-103</option>
-                <option>M-A-104</option>
-                <option>M-A-105</option>
               </select>
             </div>
             <div class="form-group">
-              <label class="form-label">Genero</label>
+              <label class="form-label">Cama a utilizar</label>
               <div style="display:flex;gap:20px;padding-top:4px;">
                 <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
-                  <input type="radio" name="genero" checked> Masculino
+                  <input type="radio" name="cama" checked> P (Principal)
                 </label>
                 <label style="font-size:13px;display:flex;align-items:center;gap:6px;cursor:pointer;">
-                  <input type="radio" name="genero"> Femenino
+                  <input type="radio" name="cama"> V (Vacante)
                 </label>
               </div>
             </div>
             <div class="form-group">
-              <label class="form-label">Fecha Ingreso</label>
+              <label class="form-label">N° Casillero</label>
+              <input type="text" class="form-input" placeholder="Ej: CAS-A-101-1">
+            </div>
+          </div>
+          <div>
+            <div class="form-group">
+              <label class="form-label">Día Llegada Campamento</label>
               <input type="date" class="form-input" value="2026-04-10">
             </div>
             <div class="form-group">
-              <label class="form-label">Fecha Salida</label>
+              <label class="form-label">Noche Bajada Campamento</label>
               <input type="date" class="form-input" value="2026-04-17">
             </div>
             <div class="form-group">
-              <label class="form-label">Observaciones</label>
-              <textarea class="form-input" rows="3" placeholder="Observaciones adicionales..."></textarea>
+              <label class="form-label">Turno Actual</label>
+              <input type="text" class="form-input" placeholder="Ej: Semana 15 - Día">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Próximo Turno</label>
+              <input type="text" class="form-input" placeholder="Ej: Semana 17 - Día">
             </div>
           </div>
         </div>
 
-        <!-- Alert -->
+        <!-- Estado habitación -->
         <div class="alert alert-info" style="margin-top:16px;">
-          &#9432; Para usuarios de Visita se requiere autorizacion de la Curva y de Hoteleria.
-        </div>
-
-        <!-- Buttons -->
-        <div style="display:flex;gap:12px;margin-top:16px;">
-          <button class="btn btn-primary">&#10140; Registrar Check-in</button>
-          <button class="btn">Limpiar</button>
+          <i class="fi fi-rr-info"></i> <strong>Estado habitación M-A-101:</strong> Disponible · No bloqueada · Última limpieza: 09/04/2026 16:30 · Género actual: Masculino
         </div>
       </div>
 
+      <!-- Sección 3: Chequeo de Condiciones -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">3. Chequeo de Condiciones <span style="font-size:11px; color:var(--text-light); font-weight:400;">(previo a entrega)</span></div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox" checked> Aseo
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox" checked> Sábanas
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox" checked> Casillero
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox"> Infraestructura
+          </label>
+        </div>
+        <div class="alert alert-warning" style="margin-top:12px;">
+          <i class="fi fi-rr-triangle-warning"></i> <strong>Desviación detectada en Infraestructura:</strong> Se generará OT automática a Facility / Sala.
+          <a href="ordenes-trabajo.html" style="margin-left:8px; color:var(--primary); font-weight:600;">Crear OT →</a>
+        </div>
+      </div>
+
+      <!-- Sección 4: Registro en sistemas -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">4. Registro en Sistemas</div>
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px;">
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer; padding:10px; background:var(--success-light); border-radius:6px;">
+            <input type="checkbox" checked> Planilla Reservas (SharePoint)
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer; padding:10px; background:var(--success-light); border-radius:6px;">
+            <input type="checkbox" checked> SAMTECH / SharePoint
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer; padding:10px; background:var(--success-light); border-radius:6px;">
+            <input type="checkbox" checked> Enrolamiento Keyplus
+          </label>
+        </div>
+      </div>
+
+      <!-- Sección 5: Onboarding -->
+      <div class="card" style="margin-bottom:24px;">
+        <div class="card-title">5. Onboarding del Usuario</div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox"> Reglamento Interno firmado
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox"> Inducción de seguridad
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox"> Entrega tarjeta Keyplus
+          </label>
+          <label style="font-size:13px; display:flex; align-items:center; gap:8px; cursor:pointer;">
+            <input type="checkbox"> Entrega llave casillero
+          </label>
+        </div>
+        <div class="form-group" style="margin-top:12px;">
+          <label class="form-label">Observaciones</label>
+          <textarea class="form-input" rows="2" placeholder="Observaciones del onboarding..."></textarea>
+        </div>
+      </div>
+
+      <!-- Alert visita -->
+      <div class="alert alert-info">
+        <i class="fi fi-rr-info"></i> Para usuarios de Visita se requiere doble autorización: Curva + Hotelería.
+      </div>
+
+      <!-- Buttons -->
+      <div style="display:flex;gap:12px;margin-top:16px;">
+        <button class="btn btn-primary"><i class="fi fi-rr-check"></i> Confirmar Check-in</button>
+        <button class="btn">Guardar Borrador</button>
+        <button class="btn">Limpiar</button>
+      </div>
+
+      <!-- Annotation -->
+      <div class="annotation" style="margin-top:16px;">
+        Flujo según procedimiento <strong>PR-MEL-OPFC-001 v12</strong> (Fecha Mod: 31-03-2026). Ante doble asignación detectada: validar en terreno, registrar evento en KPI-SharePoint e informar a Especialista de Campamento.
+      </div>
+
       <!-- Recent Check-ins Table -->
-      <div class="card">
-        <div class="card-title">Ultimos Check-ins Hoy</div>
+      <div class="card" style="margin-top:24px;">
+        <div class="card-title">Últimos Check-ins Hoy</div>
         <table>
           <thead>
             <tr>
@@ -198,7 +356,8 @@
               <th>Nombre</th>
               <th>Empresa</th>
               <th>Tipo</th>
-              <th>Habitacion</th>
+              <th>Hab / Cama</th>
+              <th>Casillero</th>
               <th>Estado</th>
             </tr>
           </thead>
@@ -209,35 +368,39 @@
               <td>Carlos Mendoza R.</td>
               <td>Bechtel</td>
               <td>Permanente</td>
-              <td>M-A-101</td>
+              <td>M-A-101 / P</td>
+              <td>CAS-A-101-1</td>
               <td><span class="badge badge-green">Confirmado</span></td>
             </tr>
             <tr>
               <td>07:50</td>
               <td>15.678.234-5</td>
-              <td>Andrea Lopez S.</td>
+              <td>Andrea López S.</td>
               <td>Fluor</td>
               <td>Permanente</td>
-              <td>M-B-214</td>
+              <td>M-B-214 / V</td>
+              <td>CAS-B-214-2</td>
               <td><span class="badge badge-green">Confirmado</span></td>
             </tr>
             <tr>
               <td>07:32</td>
               <td>18.234.567-1</td>
-              <td>Jorge Ramirez T.</td>
+              <td>Jorge Ramírez T.</td>
               <td>Komatsu</td>
               <td>Reemplazo</td>
-              <td>M-C-310</td>
-              <td><span class="badge badge-yellow">Pendiente</span></td>
+              <td>M-C-310 / P</td>
+              <td>CAS-C-310-1</td>
+              <td><span class="badge badge-yellow">Onboarding pendiente</span></td>
             </tr>
             <tr>
               <td>07:10</td>
               <td>11.987.654-3</td>
-              <td>Maria Gonzalez P.</td>
+              <td>María González P.</td>
               <td>Aramark Chile</td>
               <td>Visita</td>
-              <td>M-A-108</td>
-              <td><span class="badge badge-blue">En revision</span></td>
+              <td>M-A-108 / V</td>
+              <td>CAS-A-108-2</td>
+              <td><span class="badge badge-blue">Dbl autorización</span></td>
             </tr>
             <tr>
               <td>06:45</td>
@@ -245,14 +408,15 @@
               <td>Felipe Torres M.</td>
               <td>Finning</td>
               <td>Permanente</td>
-              <td>M-D-402</td>
-              <td><span class="badge badge-green">Confirmado</span></td>
+              <td>M-D-402 / P</td>
+              <td>CAS-D-402-1</td>
+              <td><span class="badge badge-red">Doble asignación</span></td>
             </tr>
           </tbody>
         </table>
         <div class="pagination">
           <span>Mostrando 5 de 23 check-ins hoy</span>
-          <span>Pagina 1 de 5</span>
+          <span>Página 1 de 5</span>
         </div>
       </div>
 
